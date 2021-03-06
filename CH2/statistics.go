@@ -42,6 +42,8 @@ type statistics struct {
 	numbers []float64
 	mean    float64
 	median  float64
+	mode float64
+	SD string
 }
 
 func master() {
@@ -92,7 +94,9 @@ func formatStats(stats statistics) string {
 <tr><td>Count</td><td>%d</td></tr>
 <tr><td>Mean</td><td>%f</td></tr>
 <tr><td>Median</td><td>%f</td></tr>
-</table>`, stats.numbers, len(stats.numbers), stats.mean, stats.median)
+<tr><td>Mode</td><td>%f</td></tr>
+<tr><td>Mode</td><td>%s</td></tr>
+</table>`, stats.numbers, len(stats.numbers), stats.mean, stats.median,stats.mode,stats.SD)
 }
 
 func getStats(numbers []float64) (stats statistics) {
@@ -100,9 +104,37 @@ func getStats(numbers []float64) (stats statistics) {
 	sort.Float64s(stats.numbers)
 	stats.mean = sum(numbers) / float64(len(numbers))
 	stats.median = median(numbers)
+	stats.mode =mode(numbers)
+	stats.SD=standardDeviation(numbers)
 	return stats
 }
+func standardDeviation(numbers []float64)string{
 
+	return "标准差"
+}
+func mode(numbers []float64)(ret float64){
+	m:=make(map[float64]int)
+	for _,num:=range numbers{
+		if _,ok:=m[num];ok{
+			m[num]=m[num]+1
+		}else{
+			m[num]=1
+		}
+	}
+	var max int
+	for _,v:=range m{
+		if max < v {
+			max=v
+		}
+	}
+	for k,v:=range m{
+		if v==max{
+			ret = k
+			return ret
+		}
+	}
+	return ret
+}
 func sum(numbers []float64) (total float64) {
 	for _, x := range numbers {
 		total += x
