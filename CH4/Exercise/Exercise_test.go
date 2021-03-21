@@ -5,7 +5,23 @@ import (
 	"reflect"
 	"testing"
 )
-
+var (
+	ini = []string{
+		"; Cut down copy of Mozilla application.ini file",
+		"",
+		"[App]",
+		"Vendor=Mozilla",
+		"Name=Iceweasel",
+		"Profile=mozilla/firefox",
+		"Version=3.5.16",
+		"[Gecko]",
+		"MinVersion=1.9.1",
+		"MaxVersion=1.9.1.*",
+		"[XRE]",
+		"EnableProfileMigrator=0",
+		"EnableExtensionManager=1",
+	}
+)
 func TestUniqueInts(t *testing.T) {
 	nums:=[]int{9,1,9,5,4,4,2,1,5,4,8,8,4,3,6,9,5,7,5}
 	expect :=[]int{9,1,5,4,2,8,3,6,7}
@@ -26,4 +42,8 @@ func TestMake2D(t *testing.T) {
 	ret :=make2d(nums,3)
 	t.Log(ret)
 
+}
+func TestParseIni(t *testing.T) {
+	ret:=ParseIni(ini)
+	t.Log(ret)
 }
