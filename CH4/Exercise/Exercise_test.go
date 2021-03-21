@@ -47,3 +47,7 @@ func TestParseIni(t *testing.T) {
 	ret:=ParseIni(ini)
 	t.Log(ret)
 }
+func TestPrintIni(t *testing.T) {
+	data:=ParseIni(ini)
+	PrintIni(data)
+}
