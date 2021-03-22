@@ -54,20 +54,7 @@ func main() {
     }
 }
 
-func commandLineFiles(files []string) []string {
-    if runtime.GOOS == "windows" {
-        args := make([]string, 0, len(files))
-        for _, name := range files {
-            if matches, err := filepath.Glob(name); err != nil {
-                args = append(args, name) // Invalid pattern
-            } else if matches != nil { // At least one match
-                args = append(args, matches...)
-            }
-        }
-        return args
-    }
-    return files
-}
+
 
 func ArchiveFileList(file string) ([]string, error) {
     if suffix := Suffix(file); suffix == ".gz" {
@@ -104,6 +91,8 @@ func ArchiveFileList3(file string) ([]string, error) {
         fallthrough
     case ".tar.gz":
         fallthrough
+    case ".tar.bz2":
+        fallthrough
     case ".tgz":
         return TarFileList(file)
     case ".zip":
@@ -124,7 +113,7 @@ func ArchiveFileList4(file string) ([]string, error) {
     return nil, errors.New("unrecognized archive")
 }
 
-func ArchiveFileListMap(file string) ([]string, error) {
+func ArchiveFileList(file string) ([]string, error) {
     if function, ok := FunctionForSuffix[Suffix(file)]; ok {
         return function(file)
     }
