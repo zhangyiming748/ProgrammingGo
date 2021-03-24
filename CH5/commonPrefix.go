@@ -5,9 +5,10 @@ import (
 	"path/filepath"
 	"strings"
 )
-
+//接收字符串返回共同前缀
 func CommonPrefix(texts []string) string {
 	components := make([][]rune, len(texts))
+	//创建二维int32
 	for i, text := range texts {
 		components[i] = []rune(text)
 	}
