@@ -1,12 +1,12 @@
 package microsoft
+
 /*
 https://docs.microsoft.com/zh-cn/learn/modules/go-get-started
- */
+*/
 
 import (
 	"fmt"
 	"math"
-
 )
 
 func hello() {
@@ -38,10 +38,10 @@ func calc(i int) {
 	total := internalSum(i)
 	println(total)
 }
-func internalSum(i int)int{
+func internalSum(i int) int {
 	var sum int
-	for ;i>0;i--{
-		sum=sum+i
+	for ; i > 0; i-- {
+		sum = sum + i
 	}
 	return sum
 }

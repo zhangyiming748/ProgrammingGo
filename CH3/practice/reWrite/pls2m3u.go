@@ -9,27 +9,27 @@ import (
 )
 
 type song struct {
-
 	Title    string
 	Filename string
 	Seconds  int
 }
-func pls2m3u(fp string){
-	song :=readpls(fp)
+
+func pls2m3u(fp string) {
+	song := readpls(fp)
 	writeM3Us(song)
 }
-func readpls(fp string)( songs []song) {
+func readpls(fp string) (songs []song) {
 	var s song
-	for _,line:=range strings.Split(fp,"\n"){
-		if line=strings.TrimSpace(line);line==""{
+	for _, line := range strings.Split(fp, "\n") {
+		if line = strings.TrimSpace(line); line == "" {
 			continue
 		}
-		switch n,val:= parseLine(line);n{
+		switch n, val := parseLine(line); n {
 		case "File":
 			s.Filename = strings.Map(
 				mapPlatformDirSeparator, val)
 		case "Title":
-			s.Title=val
+			s.Title = val
 		case "Length":
 			var err error
 			if s.Seconds, err = strconv.Atoi(val); err != nil {
@@ -40,7 +40,7 @@ func readpls(fp string)( songs []song) {
 		}
 		if s.Filename != "" && s.Title != "" && s.Seconds != 0 {
 			songs = append(songs, s)
-			s = song{}//初始化进入下次循环
+			s = song{} //初始化进入下次循环
 		}
 	}
 	return songs

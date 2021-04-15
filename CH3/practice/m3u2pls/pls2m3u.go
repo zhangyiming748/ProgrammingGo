@@ -32,7 +32,7 @@ func main() {
 		if strings.HasSuffix(os.Args[1], "pls") {
 			songs := readPlsPlaylist(data)
 			writeM3uPlaylist(songs)
-		} else if strings.HasSuffix(os.Args[1],"m3u") {
+		} else if strings.HasSuffix(os.Args[1], "m3u") {
 			songs := readM3uPlaylist(data)
 			writePlsPlaylist(songs)
 		}

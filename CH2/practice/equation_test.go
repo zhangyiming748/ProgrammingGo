@@ -16,8 +16,8 @@ func TestEquation(t *testing.T) {
 }
 func TestGo(t *testing.T) {
 
-	Phi:='\U000003A6'
-	fen:='\U000000A2'
-	yingbang:='\U000000A3'
-	fmt.Printf("'%c' '%c' '%c'", Phi,fen,yingbang)
+	Phi := '\U000003A6'
+	fen := '\U000000A2'
+	yingbang := '\U000000A3'
+	fmt.Printf("'%c' '%c' '%c'", Phi, fen, yingbang)
 }

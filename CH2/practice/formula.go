@@ -10,13 +10,12 @@ import (
 	"strings"
 )
 
-
 const (
-	pageTop    = `<!DOCTYPE HTML><html><head>
+	pageTop = `<!DOCTYPE HTML><html><head>
 <style>.error{color:#FF0000;}</style></head><title>Statistics</title>
 <body><h3>Statistics</h3>
 <p>Computes basic statistics for a given list of numbers</p>`
-	form       = `<form action="/" method="POST">
+	form = `<form action="/" method="POST">
 <label for="numbers">Numbers (comma or space-separated):</label><br />
 <input type="text" name="numbers" size="30"><br />
 <input type="submit" value="Calculate">
@@ -26,9 +25,9 @@ const (
 )
 
 type formula struct {
-	a float64
-	b float64
-	c float64
+	a  float64
+	b  float64
+	c  float64
 	y1 float64
 	y2 float64
 }
@@ -79,13 +78,13 @@ func formatFormula(f formula) string {
 <tr><th colspan="2">Results</th></tr>
 <tr><td>Y1</td><td>%v</td></tr>
 <tr><td>Y2</td><td>%v</td></tr>
-</table>`, f.y1,f.y2)
+</table>`, f.y1, f.y2)
 }
 
 func getFormula(numbers []float64) (f formula) {
 	f.a = numbers[0]
-	f.b= numbers[1]
-	f.c =numbers[2]
-	f.y1,f.y2=equation(f.a,f.b,f.c)
+	f.b = numbers[1]
+	f.c = numbers[2]
+	f.y1, f.y2 = equation(f.a, f.b, f.c)
 	return f
 }

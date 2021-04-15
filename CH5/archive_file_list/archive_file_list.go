@@ -67,8 +67,7 @@ func Suffix(file string) string {
 	file = strings.ToLower(filepath.Base(file))
 	if i := strings.LastIndex(file, "."); i > -1 {
 		if file[i:] == ".bz2" || file[i:] == ".gz" || file[i:] == ".xz" {
-			if j := strings.LastIndex(file[:i], ".");
-				j > -1 && strings.HasPrefix(file[j:], ".tar") {
+			if j := strings.LastIndex(file[:i], "."); j > -1 && strings.HasPrefix(file[j:], ".tar") {
 				return file[j:]
 			}
 		}

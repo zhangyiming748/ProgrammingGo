@@ -9,10 +9,9 @@ func errWay() {
 	if data, ok := data.(int); ok {
 		fmt.Println("[is an int], data: ", data)
 	} else {
-		fmt.Println("[not an int], data: ", data)    // [isn't a int], data:  0
+		fmt.Println("[not an int], data: ", data) // [isn't a int], data:  0
 	}
 }
-
 
 // 正确示例
 func createWay() {
@@ -21,7 +20,6 @@ func createWay() {
 	if res, ok := data.(int); ok {
 		fmt.Println("[is an int], data: ", res)
 	} else {
-		fmt.Println("[not an int], data: ", data)    // [not an int], data:  great
+		fmt.Println("[not an int], data: ", data) // [not an int], data:  great
 	}
 }
-

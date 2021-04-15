@@ -1,7 +1,5 @@
 package Assertion
 
-
-
 func assertion(i interface{}) string {
 	switch i.(type) {
 	case int:

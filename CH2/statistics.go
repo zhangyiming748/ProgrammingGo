@@ -22,14 +22,12 @@ import (
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
-
 const (
-	pageTop    = `<!DOCTYPE HTML><html><head>
+	pageTop = `<!DOCTYPE HTML><html><head>
 <style>.error{color:#FF0000;}</style></head><title>Statistics</title>
 <body><h3>Statistics</h3>
 <p>Computes basic statistics for a given list of numbers</p>`
-	form       = `<form action="/" method="POST">
+	form = `<form action="/" method="POST">
 <label for="numbers">Numbers (comma or space-separated):</label><br />
 <input type="text" name="numbers" size="30"><br />
 <input type="submit" value="Calculate">
@@ -42,8 +40,8 @@ type statistics struct {
 	numbers []float64
 	mean    float64
 	median  float64
-	mode float64
-	SD string
+	mode    float64
+	SD      string
 }
 
 func master() {
@@ -96,7 +94,7 @@ func formatStats(stats statistics) string {
 <tr><td>Median</td><td>%f</td></tr>
 <tr><td>Mode</td><td>%f</td></tr>
 <tr><td>Mode</td><td>%s</td></tr>
-</table>`, stats.numbers, len(stats.numbers), stats.mean, stats.median,stats.mode,stats.SD)
+</table>`, stats.numbers, len(stats.numbers), stats.mean, stats.median, stats.mode, stats.SD)
 }
 
 func getStats(numbers []float64) (stats statistics) {
@@ -104,31 +102,31 @@ func getStats(numbers []float64) (stats statistics) {
 	sort.Float64s(stats.numbers)
 	stats.mean = sum(numbers) / float64(len(numbers))
 	stats.median = median(numbers)
-	stats.mode =mode(numbers)
-	stats.SD=standardDeviation(numbers)
+	stats.mode = mode(numbers)
+	stats.SD = standardDeviation(numbers)
 	return stats
 }
-func standardDeviation(numbers []float64)string{
+func standardDeviation(numbers []float64) string {
 
 	return "标准差"
 }
-func mode(numbers []float64)(ret float64){
-	m:=make(map[float64]int)
-	for _,num:=range numbers{
-		if _,ok:=m[num];ok{
-			m[num]=m[num]+1
-		}else{
-			m[num]=1
+func mode(numbers []float64) (ret float64) {
+	m := make(map[float64]int)
+	for _, num := range numbers {
+		if _, ok := m[num]; ok {
+			m[num] = m[num] + 1
+		} else {
+			m[num] = 1
 		}
 	}
 	var max int
-	for _,v:=range m{
+	for _, v := range m {
 		if max < v {
-			max=v
+			max = v
 		}
 	}
-	for k,v:=range m{
-		if v==max{
+	for k, v := range m {
+		if v == max {
 			ret = k
 			return ret
 		}

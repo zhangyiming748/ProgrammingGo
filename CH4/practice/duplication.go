@@ -1,7 +1,5 @@
 package practice
 
-
-
 func duplication(i []int) []int {
 	m := make(map[int]bool)
 	var s []int
@@ -13,11 +11,11 @@ func duplication(i []int) []int {
 	}
 	return s
 }
-func flatten(ss[][]int)[]int {
-	nums:=[]int{}
-	for _,s:=range ss {
-		for _,v:=range s{
-			nums= append(nums, v)
+func flatten(ss [][]int) []int {
+	nums := []int{}
+	for _, s := range ss {
+		for _, v := range s {
+			nums = append(nums, v)
 		}
 	}
 	return nums

@@ -1,6 +1,7 @@
 package CH4
 
 import "testing"
+
 var (
 	iniData = []string{
 		"; Cut down copy of Mozilla application.ini file",
@@ -18,10 +19,11 @@ var (
 		"EnableExtensionManager=1",
 	}
 )
+
 func TestMaster(t *testing.T) {
 	master()
 }
 func TestParseIni(t *testing.T) {
-	ret:=ParseIni(iniData)
+	ret := ParseIni(iniData)
 	t.Log(ret)
 }

@@ -1,14 +1,14 @@
-
 package FuzzyBool
 
 import "fmt"
+
 type FuzzyBool float32
+
 //func New(value interface{}) (*FuzzyBool, error) {
 //	amount, err := float32ForValue(value)
 //	return &FuzzyBool{amount}, err
 //}
 func master() {
-
 
 	a, _ := New(0)
 	b, _ := New(.25)
@@ -50,7 +50,7 @@ func New(value interface{}) (FuzzyBool, error) {
 			fuzzy = 1
 		}
 	default:
-		return FuzzyBool(0), fmt.Errorf("fuzzybool.New(): %v is not a " +
+		return FuzzyBool(0), fmt.Errorf("fuzzybool.New(): %v is not a "+
 			"number or boolean\n", value)
 	}
 	if fuzzy < 0 {

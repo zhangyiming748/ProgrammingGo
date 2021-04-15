@@ -26,7 +26,7 @@ func TestMaster(t *testing.T) {
 		if strings.HasSuffix(os.Args[1], "pls") {
 			songs := readpls(data)
 			writeM3Us(songs)
-		} else if strings.HasSuffix(os.Args[1],"m3u") {
+		} else if strings.HasSuffix(os.Args[1], "m3u") {
 			songs := readM3uPlaylist(data)
 			writePlsPlaylist(songs)
 		}
