@@ -1,1 +1,475 @@
-package CH8
+{
+  "status": "1",
+  "regeocode": {
+    "roads": [
+      {
+        "id": "010J50F0020191493",
+        "location": "116.368,39.9107",
+        "direction": "南",
+        "name": "皮库胡同",
+        "distance": "25.1297"
+      },
+      {
+        "id": "010J50F00201918912",
+        "location": "116.369,39.9105",
+        "direction": "西",
+        "name": "华远西街",
+        "distance": "74.7524"
+      },
+      {
+        "id": "010J50F0020192297",
+        "location": "116.367,39.9105",
+        "direction": "东",
+        "name": "二龙路",
+        "distance": "87.4297"
+      }
+    ],
+    "roadinters": [
+      {
+        "second_name": "二龙路西街",
+        "first_id": "010J50F0020191493",
+        "second_id": "010J50F002019340081",
+        "location": "116.366976,39.910662",
+        "distance": "89.9057",
+        "first_name": "皮库胡同",
+        "direction": "东"
+      }
+    ],
+    "formatted_address": "北京市西城区金融街街道新京畿道实验幼儿园京畿道小区",
+    "addressComponent": {
+      "city": [],
+      "province": "北京市",
+      "adcode": "110102",
+      "district": "西城区",
+      "towncode": "110102011000",
+      "streetNumber": {
+        "number": "41号",
+        "location": "116.366952,39.910101",
+        "direction": "西",
+        "distance": "99.3373",
+        "street": "二龙路"
+      },
+      "country": "中国",
+      "township": "金融街街道",
+      "businessAreas": [
+        {
+          "location": "116.374112,39.910766",
+          "name": "西单",
+          "id": "110102"
+        },
+        {
+          "location": "116.373829,39.911414",
+          "name": "大悦城",
+          "id": "110102"
+        },
+        {
+          "location": "116.360197,39.915817",
+          "name": "金融街",
+          "id": "110102"
+        }
+      ],
+      "building": {
+        "name": [],
+        "type": []
+      },
+      "neighborhood": {
+        "name": [],
+        "type": []
+      },
+      "citycode": "010"
+    },
+    "aois": [
+      {
+        "area": "18861.221231",
+        "type": "120302",
+        "id": "B000A845CJ",
+        "location": "116.367919,39.909897",
+        "adcode": "110102",
+        "name": "京畿道小区",
+        "distance": "0"
+      },
+      {
+        "area": "919.462891",
+        "type": "141204",
+        "id": "B000A7AB37",
+        "location": "116.368181,39.910492",
+        "adcode": "110102",
+        "name": "新京畿道实验幼儿园",
+        "distance": "2.91492"
+      },
+      {
+        "area": "34632.830722",
+        "type": "141202",
+        "id": "B000A81KDV",
+        "location": "116.369019,39.911204",
+        "adcode": "110102",
+        "name": "北京师范大学附属实验中学",
+        "distance": "30.2147"
+      }
+    ],
+    "pois": [
+      {
+        "id": "B000A845CJ",
+        "direction": "南",
+        "businessarea": "西单",
+        "address": "中京畿道与太平桥大街路口以东100米",
+        "poiweight": "0.339889",
+        "name": "京畿道小区",
+        "location": "116.367919,39.909897",
+        "distance": "65.7311",
+        "tel": [],
+        "type": "商务住宅;住宅区;住宅小区"
+      },
+      {
+        "id": "B000A7AB37",
+        "direction": "东",
+        "businessarea": "西单",
+        "address": "东太平街与新文化街交叉口东150米",
+        "poiweight": "0.307386",
+        "name": "新京畿道实验幼儿园",
+        "location": "116.368181,39.910492",
+        "distance": "15.1393",
+        "tel": "010-66022044",
+        "type": "科教文化服务;学校;幼儿园"
+      },
+      {
+        "id": "B000A81KDV",
+        "direction": "东北",
+        "businessarea": "西单",
+        "address": "二龙路14号",
+        "poiweight": "0.688972",
+        "name": "北京师范大学附属实验中学",
+        "location": "116.369019,39.911204",
+        "distance": "117.879",
+        "tel": "010-66526188",
+        "type": "科教文化服务;学校;中学"
+      },
+      {
+        "id": "B000A7HFIS",
+        "direction": "东",
+        "businessarea": "西单",
+        "address": "京畿道小区13号楼",
+        "poiweight": "0.443384",
+        "name": "二龙路派出所",
+        "location": "116.368652,39.910611",
+        "distance": "57.0427",
+        "tel": "010-66010110;010-83995480",
+        "type": "政府机构及社会团体;公检法机构;公安警察"
+      },
+      {
+        "id": "B000A84IZS",
+        "direction": "东南",
+        "businessarea": "西单",
+        "address": "东京畿道10号",
+        "poiweight": "0.303451",
+        "name": "石化写字楼",
+        "location": "116.369279,39.909820",
+        "distance": "131.477",
+        "tel": "010-66015550",
+        "type": "商务住宅;楼宇;商务写字楼"
+      },
+      {
+        "id": "B0FFLP46KL",
+        "direction": "西南",
+        "businessarea": "西单",
+        "address": "京畿道5号1层",
+        "poiweight": "0.239628",
+        "name": "金融街街道教育社区卫生服务站",
+        "location": "116.367171,39.909694",
+        "distance": "113.021",
+        "tel": "010-66012662;010-66051560",
+        "type": "医疗保健服务;综合医院;卫生院"
+      },
+      {
+        "id": "B000AA19MZ",
+        "direction": "东",
+        "businessarea": "西单",
+        "address": "二龙路14号皮库胡同中部",
+        "poiweight": "0.31277",
+        "name": "中国教育学会培训中心(皮库胡同)",
+        "location": "116.369278,39.910839",
+        "distance": "115.607",
+        "tel": "010-66018654;010-66012090",
+        "type": "科教文化服务;培训机构;培训机构"
+      },
+      {
+        "id": "B000A8VZW7",
+        "direction": "南",
+        "businessarea": "西单",
+        "address": "大六部口街24号附近",
+        "poiweight": "0.18328",
+        "name": "京畿道社区残疾人康复站",
+        "location": "116.367911,39.909475",
+        "distance": "112.529",
+        "tel": [],
+        "type": "医疗保健服务;医疗保健服务场所;医疗保健服务场所"
+      },
+      {
+        "id": "B0FFG9JZJY",
+        "direction": "东北",
+        "businessarea": "西单",
+        "address": "皮库胡同与华远西街交叉路口西侧",
+        "poiweight": "0.259766",
+        "name": "二龙路派出所户籍大厅",
+        "location": "116.368263,39.910667",
+        "distance": "30.0085",
+        "tel": "010-83995480",
+        "type": "政府机构及社会团体;公检法机构;公安警察"
+      },
+      {
+        "id": "B000A5FA48",
+        "direction": "东南",
+        "businessarea": "西单",
+        "address": "中京畿道1号院2号楼",
+        "poiweight": "0.255307",
+        "name": "西城职教综合实习楼",
+        "location": "116.369175,39.909397",
+        "distance": "156.851",
+        "tel": [],
+        "type": "科教文化服务;学校;学校"
+      },
+      {
+        "id": "B000A8X8DU",
+        "direction": "东南",
+        "businessarea": "西单",
+        "address": "东京畿道10号石化写字楼",
+        "poiweight": "0.235604",
+        "name": "桦树湾教育培训学校(华远西街)",
+        "location": "116.369183,39.909868",
+        "distance": "121.713",
+        "tel": "010-66218158",
+        "type": "科教文化服务;培训机构;培训机构"
+      },
+      {
+        "id": "B000A8US1H",
+        "direction": "西",
+        "businessarea": "西单",
+        "address": "二龙路39号",
+        "poiweight": "0.522801",
+        "name": "北京市公安局西城分局",
+        "location": "116.366330,39.911100",
+        "distance": "158.335",
+        "tel": "010-83995110;010-66062266",
+        "type": "政府机构及社会团体;公检法机构;公安警察"
+      },
+      {
+        "id": "B000A7M8EB",
+        "direction": "东南",
+        "businessarea": "西单",
+        "address": "中京畿道1号",
+        "poiweight": "0.344906",
+        "name": "西单小学",
+        "location": "116.369602,39.909426",
+        "distance": "180.084",
+        "tel": "010-66071253;010-66020526",
+        "type": "科教文化服务;学校;小学"
+      },
+      {
+        "id": "B000A84986",
+        "direction": "东南",
+        "businessarea": "西单",
+        "address": "中京畿道1号院2号楼西城职教综合实习楼",
+        "poiweight": "0.143266",
+        "name": "北京市西城区职业与成人教育中心",
+        "location": "116.369072,39.909364",
+        "distance": "154.357",
+        "tel": [],
+        "type": "科教文化服务;学校;成人教育"
+      },
+      {
+        "id": "B000AA16IL",
+        "direction": "东南",
+        "businessarea": "西单",
+        "address": "中京畿道1号院2号楼西城职教综合实习楼",
+        "poiweight": "0.204635",
+        "name": "北京市酒店旅游管理培训学校",
+        "location": "116.369069,39.909375",
+        "distance": "153.207",
+        "tel": [],
+        "type": "科教文化服务;培训机构;培训机构"
+      },
+      {
+        "id": "B000A8W1SO",
+        "direction": "南",
+        "businessarea": "西单",
+        "address": "京畿道小区甲1号",
+        "poiweight": "0.183343",
+        "name": "京畿道社区居委会",
+        "location": "116.367911,39.909475",
+        "distance": "112.529",
+        "tel": "010-66014798;010-66088349",
+        "type": "政府机构及社会团体;政府机关;乡镇以下级政府及事业单位"
+      },
+      {
+        "id": "B000A8W1K0",
+        "direction": "南",
+        "businessarea": "西单",
+        "address": "大六部口街24号",
+        "poiweight": "0.103419",
+        "name": "京畿道社区来京人员和出租房屋服务站",
+        "location": "116.367911,39.909475",
+        "distance": "112.529",
+        "tel": "010-66015236",
+        "type": "政府机构及社会团体;公检法机构;社会治安机构"
+      },
+      {
+        "id": "B000A8W1K9",
+        "direction": "南",
+        "businessarea": "西单",
+        "address": [],
+        "poiweight": "0.117886",
+        "name": "京畿道社区党(团)员服务站",
+        "location": "116.367911,39.909475",
+        "distance": "112.529",
+        "tel": [],
+        "type": "政府机构及社会团体;政府机关;乡镇以下级政府及事业单位"
+      },
+      {
+        "id": "B000A8W1JA",
+        "direction": "南",
+        "businessarea": "西单",
+        "address": "大六部口街24号附近",
+        "poiweight": "0.116825",
+        "name": "中共京畿道社区委员会",
+        "location": "116.367911,39.909475",
+        "distance": "112.529",
+        "tel": [],
+        "type": "政府机构及社会团体;政府机关;乡镇以下级政府及事业单位"
+      },
+      {
+        "id": "B000A8VYVJ",
+        "direction": "南",
+        "businessarea": "西单",
+        "address": "大六部口街24号附近",
+        "poiweight": "0.302375",
+        "name": "金融街街道京畿道社区",
+        "location": "116.367911,39.909475",
+        "distance": "112.529",
+        "tel": [],
+        "type": "政府机构及社会团体;政府机关;乡镇以下级政府及事业单位"
+      },
+      {
+        "id": "B000AA16II",
+        "direction": "东南",
+        "businessarea": "西单",
+        "address": "中京畿道1号院2号楼西城职教综合实习楼",
+        "poiweight": "0.182703",
+        "name": "北京市西城区旅游职业教育集团",
+        "location": "116.369074,39.909374",
+        "distance": "153.559",
+        "tel": [],
+        "type": "科教文化服务;学校;职业技术学校"
+      },
+      {
+        "id": "B000A7I5SL",
+        "direction": "东",
+        "businessarea": "西单",
+        "address": "西单皮库胡同246号",
+        "poiweight": "0.383671",
+        "name": "丽华苑",
+        "location": "116.369763,39.910242",
+        "distance": "152.453",
+        "tel": [],
+        "type": "商务住宅;住宅区;住宅小区"
+      },
+      {
+        "id": "B0FFFEFIYJ",
+        "direction": "西北",
+        "businessarea": "西单",
+        "address": "大木仓胡同41号北京协和医院西院内",
+        "poiweight": "0.451224",
+        "name": "协和医院西院门诊部",
+        "location": "116.367341,39.912084",
+        "distance": "186.626",
+        "tel": "010-69155564",
+        "type": "医疗保健服务;综合医院;三级甲等医院"
+      },
+      {
+        "id": "B000A14721",
+        "direction": "东",
+        "businessarea": "西单",
+        "address": "东京畿道10号",
+        "poiweight": "0.485211",
+        "name": "北京石化宾馆",
+        "location": "116.369002,39.910112",
+        "distance": "94.6727",
+        "tel": "010-66023578;010-66012633",
+        "type": "住宿服务;宾馆酒店;宾馆酒店"
+      },
+      {
+        "id": "B000A85KRH",
+        "direction": "西南",
+        "businessarea": "西单",
+        "address": "太平桥大街250号",
+        "poiweight": "0.571757",
+        "name": "紫藤快捷酒店(暂停营业)",
+        "location": "116.366673,39.909250",
+        "distance": "178.126",
+        "tel": [],
+        "type": "住宿服务;宾馆酒店;宾馆酒店"
+      },
+      {
+        "id": "B000A84E93",
+        "direction": "西",
+        "businessarea": "西单",
+        "address": "二龙路甲41-1号",
+        "poiweight": "0.14787",
+        "name": "全国供销合作总社二龙路41号楼宿舍",
+        "location": "116.366694,39.910400",
+        "distance": "112.131",
+        "tel": [],
+        "type": "商务住宅;住宅区;宿舍"
+      },
+      {
+        "id": "B000A8XB65",
+        "direction": "东南",
+        "businessarea": "西单",
+        "address": "东京畿道10号石化写字楼",
+        "poiweight": "0.269085",
+        "name": "中国教育发展战略学会教育中介机构工作委员会",
+        "location": "116.369183,39.909868",
+        "distance": "121.713",
+        "tel": [],
+        "type": "政府机构及社会团体;社会团体;行业协会"
+      },
+      {
+        "id": "B000A14055",
+        "direction": "西南",
+        "businessarea": "西单",
+        "address": "中京畿道12号",
+        "poiweight": "0.340866",
+        "name": "中国质量协会(中京畿道)",
+        "location": "116.367001,39.909228",
+        "distance": "163.814",
+        "tel": "010-66079100",
+        "type": "政府机构及社会团体;社会团体;行业协会"
+      },
+      {
+        "id": "B000A8648V",
+        "direction": "西南",
+        "businessarea": "西单",
+        "address": "下岗胡同与二龙路交叉口东50米",
+        "poiweight": "0.334607",
+        "name": "二龙路小区",
+        "location": "116.366649,39.909428",
+        "distance": "164.795",
+        "tel": "010-66053218",
+        "type": "商务住宅;住宅区;住宅小区"
+      },
+      {
+        "id": "B000A8410F",
+        "direction": "东南",
+        "businessarea": "西单",
+        "address": "天桥街道东京几道10号楼",
+        "poiweight": "0.359532",
+        "name": "石化酒楼(金融街店)",
+        "location": "116.369023,39.909805",
+        "distance": "115.176",
+        "tel": "010-66082882",
+        "type": "餐饮服务;中餐厅;综合酒楼"
+      }
+    ]
+  },
+  "info": "OK",
+  "infocode": "10000"
+}
