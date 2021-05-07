@@ -2,6 +2,9 @@ package CH8
 
 import (
 	"encoding/json"
+	"fmt"
+
+	//"encoding/xml"
 
 	"io"
 	"io/ioutil"
@@ -10,60 +13,48 @@ import (
 	"os"
 	"testing"
 )
+
 var (
 	key = "3e469a45a72b31c120b0baf6609ae877"
 	//换成你自己的key
 )
+
 type GEO struct {
-	status    string `json:"status"`
-	regeocode string `json:"regeocode"`
-	info      string `json:"info"`
-	infocode  int    `json:"infocode"`
-}
-type regeocode struct {
-	roads             []road      `json:"roads"`
-	roadinters        []roadinter `json:"roadinters"`
-	formatted_address string      `json:"formatted_address"`
-	addressComponent  string      `json:"address_component"`
-	aois              []aoi       `json:"aois"`
-	pois              []poi       `json:"pois"`
-}
-type road struct {
-	id        string `json:"id"`
-	location  string `json:"location"`
-	direction string `json:"direction"`
-	name      string `json:"name"`
-	distance  string `json:"distance"`
-}
-type roadinter struct {
-	second_name string `json:"second_name"`
-	first_id    string `json:"first_id"`
-	second_id   string `json:"second_id"`
-	Location    string `json:"location"`
-	distance    string `json:"distance"`
-	first_name  string `json:"first_name"`
-	direction   string `json:"direction"`
-}
-type aoi struct {
-	area     string `json:"area"`
-	typei    string `json:"type"`
-	id       string `json:"id"`
-	location string `json:"location"`
-	adcode   string `json:"adcode"`
-	name     string `json:"name"`
-	distance string `json:"distance"`
-}
-type poi struct {
-	id           string `json:"id"`
-	direction    string `json:"direction"`
-	businessarea string `json:"businessarea"`
-	address      string `json:"address"`
-	poiweight    string `json:"poiweight"`
-	name         string `json:"name"`
-	Location     string `json:"location"`
-	distance     string `json:"distance"`
-	tel          string `json:"tel"`
-	typei        string `json:"typei"`
+	Status    string    `json:"status"`
+	Info      string `json:"info"`
+	Infocode  string    `json:"infocode"`
+	Regeocode struct {
+		AddressComponent struct {
+			City         string `json:"city"`
+			Province     string `json:"province"`
+			Adcode       string    `json:"adcode"`
+			District     string `json:"district"`
+			Towncode     string `json:"towncode"`
+			StreetNumber struct {
+				Number    string  `json:"number"`
+				Location  string  `json:"location"`
+				Direction string  `json:"direction"`
+				Distance  string `json:"distance"`
+				Street    string  `json:"street"`
+			} `json:"street_number"`
+			Country       string `json:"country"`
+			Township      string `json:"township"`
+			BusinessAreas []struct {
+				Location string `json:"location"`
+				Name     string `json:"name"`
+				Id       string    `json:"id"`
+			} `json:"business_areas"`
+			Building struct {
+				Name  string `json:"name"`
+				Typei string `json:"type"`
+			} `json:"building"`
+			Neighborhood struct {
+				Name  string `json:"name"`
+				Typei string `json:"type"`
+			} `json:"neighborhood"`
+		} `json:"address_component"`
+		Formatted_address string `json:"formatted_address"`
+	} `json:"regeocode"`
 }
 
 func TestLog(t *testing.T) {
@@ -109,14 +100,14 @@ func TestLogger(t *testing.T) {
 func TestEncodeJSON(t *testing.T) {
 	var c GEO
 	location := "116.36800384499999,39.91048431388889"
-	JSON:=Decode(location)
-	err:=json.Unmarshal(JSON,&c)
-	if err !=nil{
+	JSON := Decode(location)
+	err := json.Unmarshal(JSON, &c)
+	if err != nil {
 		t.Log(err)
 	}
-	t.Logf("decode之后:%v",JSON)
+	fmt.Println(c.Regeocode.Formatted_address)
 }
-func Decode(locat string)[]byte {
+func Decode(locat string) []byte {
 	url := "https://restapi.amap.com/v3/geocode/regeo?output=json&location=" + locat + "&key=" + key + "&radius=1000&extensions=all"
 	response, err := http.Get(url)
 	if err != nil {
