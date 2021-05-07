@@ -20,30 +20,30 @@ var (
 )
 
 type GEO struct {
-	Status    string    `json:"status"`
+	Status    string `json:"status"`
 	Info      string `json:"info"`
-	Infocode  string    `json:"infocode"`
+	Infocode  string `json:"infocode"`
 	Regeocode struct {
 		AddressComponent struct {
 			City         string `json:"city"`
 			Province     string `json:"province"`
-			Adcode       string    `json:"adcode"`
+			Adcode       string `json:"adcode"`
 			District     string `json:"district"`
 			Towncode     string `json:"towncode"`
 			StreetNumber struct {
-				Number    string  `json:"number"`
-				Location  string  `json:"location"`
-				Direction string  `json:"direction"`
+				Number    string `json:"number"`
+				Location  string `json:"location"`
+				Direction string `json:"direction"`
 				Distance  string `json:"distance"`
-				Street    string  `json:"street"`
-			} `json:"street_number"`
+				Street    string `json:"street"`
+			} `json:"streetNumber"`
 			Country       string `json:"country"`
 			Township      string `json:"township"`
 			BusinessAreas []struct {
 				Location string `json:"location"`
 				Name     string `json:"name"`
-				Id       string    `json:"id"`
-			} `json:"business_areas"`
+				Id       string `json:"id"`
+			} `json:"businessAreas"`
 			Building struct {
 				Name  string `json:"name"`
 				Typei string `json:"type"`
@@ -52,7 +52,7 @@ type GEO struct {
 				Name  string `json:"name"`
 				Typei string `json:"type"`
 			} `json:"neighborhood"`
-		} `json:"address_component"`
+		} `json:"addressComponent"`
 		Formatted_address string `json:"formatted_address"`
 	} `json:"regeocode"`
 }
@@ -105,7 +105,15 @@ func TestEncodeJSON(t *testing.T) {
 	if err != nil {
 		t.Log(err)
 	}
-	fmt.Println(c.Regeocode.Formatted_address)
+	fmt.Printf("status = %s\n", c.Status)
+	if c.Regeocode.AddressComponent.City == "" {
+		c.Regeocode.AddressComponent.City = "直辖市"
+	}
+	fmt.Printf("city = %s\n", c.Regeocode.AddressComponent.City)
+	fmt.Printf("province = %s\n", c.Regeocode.AddressComponent.Province)
+	fmt.Printf("adcode = %s\n", c.Regeocode.AddressComponent.Adcode)
+	fmt.Printf("当前位置是%s %s %s %s %s %s\n", c.Regeocode.AddressComponent.Country, c.Regeocode.AddressComponent.Province, c.Regeocode.AddressComponent.District, c.Regeocode.AddressComponent.StreetNumber.Street, c.Regeocode.AddressComponent.StreetNumber.Number, c.Regeocode.AddressComponent.StreetNumber.Direction)
+
 }
 func Decode(locat string) []byte {
 	url := "https://restapi.amap.com/v3/geocode/regeo?output=json&location=" + locat + "&key=" + key + "&radius=1000&extensions=all"
