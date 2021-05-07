@@ -96,7 +96,10 @@ func TestLogger(t *testing.T) {
 	Warning.Println("我有一些人生的经验要说")
 	Error.Println("我要警告你")
 }
-
+/*
+为了模拟真实的数据构造json
+为了解析正确用了一天时间(加上熟悉log包)
+ */
 func TestEncodeJSON(t *testing.T) {
 	var c GEO
 	location := "116.36800384499999,39.91048431388889"
