@@ -3,6 +3,7 @@ package CH8
 import (
 	"encoding/json"
 	"fmt"
+	"runtime"
 
 	//"encoding/xml"
 
@@ -96,15 +97,18 @@ func TestLogger(t *testing.T) {
 	Warning.Println("我有一些人生的经验要说")
 	Error.Println("我要警告你")
 }
+
 /*
 为了模拟真实的数据构造json
 为了解析正确用了一天时间(加上熟悉log包)
- */
+*/
 func TestEncodeJSON(t *testing.T) {
 	var c GEO
-	location := "116.36800384499999,39.91048431388889"
+
+	location := "116.0119343,39.66127144"
 	JSON := Decode(location)
 	err := json.Unmarshal(JSON, &c)
+
 	if err != nil {
 		t.Log(err)
 	}
@@ -116,6 +120,17 @@ func TestEncodeJSON(t *testing.T) {
 	fmt.Printf("province = %s\n", c.Regeocode.AddressComponent.Province)
 	fmt.Printf("adcode = %s\n", c.Regeocode.AddressComponent.Adcode)
 	fmt.Printf("当前位置是%s %s %s %s %s %s\n", c.Regeocode.AddressComponent.Country, c.Regeocode.AddressComponent.Province, c.Regeocode.AddressComponent.District, c.Regeocode.AddressComponent.StreetNumber.Street, c.Regeocode.AddressComponent.StreetNumber.Number, c.Regeocode.AddressComponent.StreetNumber.Direction)
+
+}
+func TestTOMap(t *testing.T) {
+	var m map[string]interface{}
+	location := "116.0119343,39.66127144"
+	JSON := Decode(location)
+	err := json.Unmarshal(JSON, &m)
+	if err != nil {
+		t.Log(err)
+	}
+	fmt.Println(m)
 
 }
 func Decode(locat string) []byte {
@@ -131,3 +146,27 @@ func Decode(locat string) []byte {
 	}
 	return body
 }
+func TestIP(t *testing.T) {
+	url := "https://restapi.amap.com/v3/ip?output=json&key=" + key
+	response, err := http.Get(url)
+	if err != nil {
+		//...
+	}
+	defer response.Body.Close() //在回复后必须关闭回复的主体
+	body, err := ioutil.ReadAll(response.Body)
+	if err != nil {
+		t.Log(err)
+	}
+	t.Log(string(body))
+}
+
+//https://restapi.amap.com/v3/ip?ip=8.8.8.8&output=xml&key=<用户的key>
+func TestCPU(t *testing.T) {
+	var num int
+	//num=runtime.GOMAXPROCS
+	t.Logf("cpu core num is : %d", runtime.NumCPU())
+	num = 10
+	runtime.GOMAXPROCS(10)
+	t.Logf("use cpu core num is : %d", num)
+}
+

@@ -1,26 +1,21 @@
-package main
+package CH8
 
 import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
 	"log"
-
 	"net/http"
+	"testing"
 )
-var (
-	key = "3e469a45a72b31c120b0baf6609ae877"
-	//换成你自己的key
-)
-func main() {
+
+const ()
+
+func TestWeather(t *testing.T) {
 	m := make(map[string]string)
 	m["北京市石景山区"] = "110107"
 	m["黑龙江省大庆市让胡路区"] = "230604"
-	for k, v := range m {
-		fmt.Printf("%s的天气信息如下", k)
-		Weather(v)
-	}
-	//Weather(m["北京市石景山区"])
+	Weather(m["北京市石景山区"])
 
 	//fmt.Println("\u00B0")
 }
@@ -46,7 +41,7 @@ func Weather(adcode string) {
 	//city := m["forecasts"].([]interface{})[0].(map[string]interface{})["city"]
 	//province := m["forecasts"].([]interface{})[0].(map[string]interface{})["province"]
 	reporttime := m["forecasts"].([]interface{})[0].(map[string]interface{})["reporttime"]
-	fmt.Printf("\t%v发布\n", reporttime)
+	fmt.Printf("%v发布\n", reporttime)
 	today_date := m["forecasts"].([]interface{})[0].(map[string]interface{})["casts"].([]interface{})[0].(map[string]interface{})["date"]
 	today_week := m["forecasts"].([]interface{})[0].(map[string]interface{})["casts"].([]interface{})[0].(map[string]interface{})["week"]
 
