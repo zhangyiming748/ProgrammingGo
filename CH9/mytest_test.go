@@ -1,8 +1,10 @@
 package CH9
 
 import (
+	"math/rand"
 	"net/http"
 	"testing"
+	"time"
 )
 
 func TestPing(t *testing.T) {
@@ -33,4 +35,21 @@ func TestPing(t *testing.T) {
 			}
 		}
 	}
+}
+func BenchmarkRand(b *testing.B) {
+	rand.Seed(time.Now().Unix())
+	//与测试无关的代码
+	b.ResetTimer()
+	for i := 0; i < b.N; i++ {
+		n:=rand.Intn(5000)
+		if i>n{
+			b.Logf("i = %d bigger tham n = %d\n",i,n)
+		}else {
+			b.Logf("i = %d smaller tham n = %d\n",i,n)
+
+		}
+		time.Sleep(50*time.Millisecond)
+	}
+	b.StopTimer()
+	//与测试无关的代码
 }

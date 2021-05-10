@@ -7,22 +7,20 @@ import (
 	"time"
 )
 
-
-
 func TestCharacter(t *testing.T) {
 	t.Logf("")
-	for i:=0;i<16;i++{
-		for j:=0;j<16;j++{
-			for p:=0;p<16;p++{
-				for q:=0;q<16;q++{
-					fi:=convert(i)
+	for i := 0; i < 16; i++ {
+		for j := 0; j < 16; j++ {
+			for p := 0; p < 16; p++ {
+				for q := 0; q < 16; q++ {
+					fi := convert(i)
 					//t.Logf("fi = %s",fi)
-					se:=convert(j)
-					th:=convert(p)
-					fo:=convert(q)
-					t.Logf("%s",strings.Join([]string{fi,se,th,fo},""))
-					ret:=fmt.Sprintf("\"\\u%s\"",strings.Join([]string{fi,se,th,fo},""))
-					fmt.Printf("ret = %s",ret)
+					se := convert(j)
+					th := convert(p)
+					fo := convert(q)
+					t.Logf("%s", strings.Join([]string{fi, se, th, fo}, ""))
+					ret := fmt.Sprintf("\"\\u%s\"", strings.Join([]string{fi, se, th, fo}, ""))
+					fmt.Printf("ret = %s", ret)
 					fmt.Println(ret)
 					time.Sleep(time.Second)
 				}
@@ -30,7 +28,7 @@ func TestCharacter(t *testing.T) {
 		}
 	}
 }
-func convert(i int)string{
+func convert(i int) string {
 	switch i {
 	case 0:
 		return "0"
@@ -76,4 +74,19 @@ func TestConvert(t *testing.T) {
 	//ret:=fmt.Sprintf("%x",r)
 	//ret:=strcon
 	//t.Log(ret)
+}
+
+func TestDev2(t *testing.T) {
+	m := make([]int, 0)
+	for i := 0; i < 100; i++ {
+		m = append(m, i)
+	}
+	for _, v := range m {
+		if v%2 == 0 {
+			t.Logf("successful")
+		} else {
+			t.Errorf("failed")
+		}
+	}
+
 }
