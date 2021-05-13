@@ -3,7 +3,7 @@ package CH9
 import (
 	"fmt"
 	"github.com/beevik/etree"
-	"strings"
+
 	"testing"
 )
 
