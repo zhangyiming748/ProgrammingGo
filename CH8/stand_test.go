@@ -169,4 +169,3 @@ func TestCPU(t *testing.T) {
 	runtime.GOMAXPROCS(10)
 	t.Logf("use cpu core num is : %d", num)
 }
-
