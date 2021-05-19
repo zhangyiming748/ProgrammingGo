@@ -7,12 +7,13 @@ import (
 	"net/http"
 	"regexp"
 )
+
 var hrefRx *regexp.Regexp
 
 func init() {
 	hrefRx = regexp.MustCompile(`<a[^>]+href=['"]?([^'">]+)['"]?`)
 }
-func LinksFromURL(url string)([]string,error) {
+func LinksFromURL(url string) ([]string, error) {
 	response, err := http.Get(url)
 	if err != nil {
 		return nil, fmt.Errorf("failed to get page: %s", err)
@@ -23,7 +24,7 @@ func LinksFromURL(url string)([]string,error) {
 	}
 	return links, nil
 }
-func LinksFromReader(reader io.Reader)([]string ,error)  {
+func LinksFromReader(reader io.Reader) ([]string, error) {
 	html, err := ioutil.ReadAll(reader)
 	if err != nil {
 		return nil, err

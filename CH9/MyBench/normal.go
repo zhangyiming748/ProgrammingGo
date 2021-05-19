@@ -5,18 +5,18 @@ import (
 	"sync"
 )
 
-func Producer(ch chan int,wg *sync.WaitGroup){
-	for i:=0;i<10;i++{
+func Producer(ch chan int, wg *sync.WaitGroup) {
+	for i := 0; i < 10; i++ {
 		wg.Add(1)
 		ch <- i
 	}
 }
-func Consumer(ch chan int, wg *sync.WaitGroup)  {
+func Consumer(ch chan int, wg *sync.WaitGroup) {
 	for {
-		if v,ok:=<-ch;ok{
+		if v, ok := <-ch; ok {
 			wg.Done()
 			fmt.Println(v)
-		}else {
+		} else {
 			break
 		}
 	}

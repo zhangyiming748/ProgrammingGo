@@ -1,4 +1,5 @@
 package CH9
+
 import (
 	"strconv"
 	"strings"
@@ -8,7 +9,6 @@ type Numbers struct {
 	TypeInt    int
 	TypeString string
 }
-
 
 func (N *Numbers) SetNumByString(numbers string) {
 
@@ -31,6 +31,7 @@ func (N Numbers) GetLen() int {
 	l := len(N.TypeString)
 	return l
 }
+
 /*
 找最小数
 标题：找最小数 时间限制：1秒 内存限制：32768K 语言：不限
@@ -46,7 +47,7 @@ func (N Numbers) GetLen() int {
 输出：
 131
 */
-func FindMin(num ,del int)int {
+func FindMin(num, del int) int {
 	var n Numbers
 	n.SetNumByInt(num)
 	//del := 4
@@ -115,7 +116,7 @@ func FindMin(num ,del int)int {
 			}
 			ret := n.TypeString[:index] + n.TypeString[index+1:]
 			n.SetNumByString(ret)
-		}else if strings.Contains(n.TypeString, "0") {
+		} else if strings.Contains(n.TypeString, "0") {
 			index := strings.Index(n.TypeString, "0")
 			if index > l-1 {
 				index = l - 1

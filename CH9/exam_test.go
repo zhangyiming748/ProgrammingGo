@@ -54,4 +54,3 @@ func TestLinksFromReader(t *testing.T) {
 			len(lines))
 	}
 }
-
