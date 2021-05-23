@@ -48,33 +48,33 @@ func adder() func(int) int {
 	}
 }
 func TestInner(t *testing.T) {
-	p:=[]int{1,2,3}
-	q:=[]int{2,3,4}
-	ret:=[]int{}
-	for _,v:=range p{
-		for _,val:=range q{
-			if v==val{
-				ret= append(ret, v)
+	p := []int{1, 2, 3}
+	q := []int{2, 3, 4}
+	ret := []int{}
+	for _, v := range p {
+		for _, val := range q {
+			if v == val {
+				ret = append(ret, v)
 			}
 		}
 	}
-	t.Logf("ret = %v",ret)
+	t.Logf("ret = %v", ret)
 }
 func TestAnotherInner(t *testing.T) {
-	p:=[]int{1,2,3}
-	q:=[]int{2,3,4}
-	m :=make(map[int]int)
-	ret:=[]int{}
-	for _,v :=range p{
-		m[v]+=1
+	p := []int{1, 2, 3}
+	q := []int{2, 3, 4}
+	m := make(map[int]int)
+	ret := []int{}
+	for _, v := range p {
+		m[v] += 1
 	}
-	for _,v:=range q{
-		m[v]+=1
+	for _, v := range q {
+		m[v] += 1
 	}
-	for k,v:=range m{
-		if v==2{
-			ret=append(ret,k)
+	for k, v := range m {
+		if v == 2 {
+			ret = append(ret, k)
 		}
 	}
-	t.Logf("ret = %v",ret)
+	t.Logf("ret = %v", ret)
 }
