@@ -4,8 +4,6 @@ import (
 	"fmt"
 	"log"
 	"os/exec"
-
-
 	//"strings"
 	//"v264add2webm/util"
 )
@@ -16,7 +14,7 @@ func Shell() error {
 	//ns:=s[1:]
 	//cmd := exec.Command(s[0],ns...)
 	//cmd:=exec.Command("ffmpeg","-codecs","|","tee","ping.log")
-	cmd:=exec.Command("bash","-c","ffmpeg -codecs | tee ffmpeg.log")
+	cmd := exec.Command("bash", "-c", "ffmpeg -codecs | tee ffmpeg.log")
 	fmt.Printf("生成的命令是:%s\n", cmd)
 	stdout, err := cmd.StdoutPipe()
 	cmd.Stderr = cmd.Stdout

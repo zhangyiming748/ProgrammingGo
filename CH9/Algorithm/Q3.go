@@ -1,4 +1,4 @@
-package CH9
+package main
 
 import (
 	"strconv"

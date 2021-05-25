@@ -1,4 +1,4 @@
-package CH9
+package main
 
 import (
 	"fmt"
@@ -32,8 +32,7 @@ func (s Student) GetH() int {
 func (s Student) GetW() int {
 	return s.Weight
 }
-func Q1() {
-	input := []int{4, 100, 100, 120, 130, 40, 30, 60, 50}
+func Q1(input []int) []int{
 	student := make([]*Student, 0, input[0])
 	for i := 0; i < input[0]; i++ {
 		s := &Student{}
@@ -56,4 +55,10 @@ func Q1() {
 	for _, v := range student {
 		fmt.Println(*v)
 	}
+	ret := []int{}
+	for _, v := range student {
+		ret = append(ret, v.No)
+	}
+	return ret
+
 }
