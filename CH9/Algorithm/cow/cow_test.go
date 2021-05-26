@@ -59,3 +59,42 @@ func TestProcess(t *testing.T) {
 	newer := append(nums[:3], nums[4:]...)
 	t.Log(newer)
 }
+
+func TestFibonacci(t *testing.T) {
+	n := 0
+	ret := Fibonacci(n)
+
+	t.Log(ret)
+	ret2 := fibonacci(n)
+	t.Log(ret2)
+}
+func TestReString(t *testing.T) {
+	s1 := "abcd"
+	ret := ReString(s1)
+	t.Log(ret)
+}
+func TestGcd(t *testing.T) {
+	a, b := 361, 121
+	ret := gcd(a, b)
+	t.Log(ret)
+}
+func TestMount(t *testing.T) {
+	nums := []int{2, 4, 1, 2, 7, 8, 4}
+	ret := mount(nums)
+	t.Log(ret)
+}
+func TestSpiralOrder(t *testing.T) {
+	nums:=[][]int{{1,2,3}, {4,5,6},{7,8,9}}
+	ret:=spiralOrder(nums)
+	t.Log(ret)
+}
+func TestMoreThanHalfNum_Solution(t *testing.T) {
+	n1:=[]int{1,2,3,2,2,2,5,4,2}
+	ret1:=MoreThanHalfNum_Solution(n1)
+	t.Logf("r1=%d\n",ret1)
+}
+func TestIsValid(t *testing.T) {
+	s:="()"
+	ret:=isValid(s)
+	t.Log(ret)
+}
