@@ -1,6 +1,5 @@
 package cow
 
-
 func twoSum(numbers []int, target int) []int {
 	if len(numbers) <= 2 {
 		return nil
