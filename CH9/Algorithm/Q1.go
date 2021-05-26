@@ -32,7 +32,7 @@ func (s Student) GetH() int {
 func (s Student) GetW() int {
 	return s.Weight
 }
-func Q1(input []int) []int{
+func Q1(input []int) []int {
 	student := make([]*Student, 0, input[0])
 	for i := 0; i < input[0]; i++ {
 		s := &Student{}

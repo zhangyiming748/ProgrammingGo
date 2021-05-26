@@ -21,7 +21,7 @@ func Q2() {
 	fmt.Printf("ret = %v\n", ret)
 
 }
-func MySort(s string) string {
+func MySort1(s string) string {
 	r := make([]rune, 0)
 
 	for _, v := range s {
