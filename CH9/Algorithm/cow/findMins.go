@@ -2,20 +2,17 @@ package cow
 
 import (
 	"fmt"
+	"sort"
 
 	"math"
 )
 
 func GetLeastNumbers_Solution(input []int, k int) []int {
-	nums:=&input
-	result:=[]int{}
-	for i := 0; i<k; i++ {
-		newline,ret:=delMin(*nums)
-		nums=&newline
-		result=append(result,ret)
-
+	if l := len(input); l < k {
+		return []int{}
 	}
-	return result
+	sort.Ints(input)
+	return input[:k]
 }
 
 type Min struct {
@@ -39,18 +36,18 @@ func findMin(nums []int) Min {
 	}
 	return ans
 }
-func delMax(nums []int)[]int{
+func delMax(nums []int) []int {
 	var maxi int
 	var maxv int
-	newLine:=[]int{}
-	for i,v:=range nums{
-		if v>maxi{
-			maxv=v
-			maxi=i
+	newLine := []int{}
+	for i, v := range nums {
+		if v > maxi {
+			maxv = v
+			maxi = i
 		}
 	}
-	newLine=append(nums[:maxi],nums[maxi+1:]...)
-	fmt.Println("del max :",maxv)
+	newLine = append(nums[:maxi], nums[maxi+1:]...)
+	fmt.Println("del max :", maxv)
 	return newLine
 }
 func delMin(s []int) ([]int, int) {
