@@ -84,17 +84,20 @@ func TestMount(t *testing.T) {
 	t.Log(ret)
 }
 func TestSpiralOrder(t *testing.T) {
-	nums:=[][]int{{1,2,3}, {4,5,6},{7,8,9}}
-	ret:=spiralOrder(nums)
+	nums := [][]int{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}
+	ret := spiralOrder(nums)
 	t.Log(ret)
 }
 func TestMoreThanHalfNum_Solution(t *testing.T) {
-	n1:=[]int{1,2,3,2,2,2,5,4,2}
-	ret1:=MoreThanHalfNum_Solution(n1)
-	t.Logf("r1=%d\n",ret1)
+	n1 := []int{1, 2, 3, 2, 2, 2, 5, 4, 2}
+	ret1 := MoreThanHalfNum_Solution(n1)
+	t.Logf("r1=%d\n", ret1)
 }
 func TestIsValid(t *testing.T) {
-	s:="()"
-	ret:=isValid(s)
+	s := "()"
+	ret := isValid(s)
 	t.Log(ret)
+}
+func TestExpression_evaluation(t *testing.T) {
+	Expression_evaluation()
 }
