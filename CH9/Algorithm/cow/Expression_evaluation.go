@@ -1,9 +1,6 @@
 package cow
 
-import (
-	"fmt"
-	"strings"
-)
+import ()
 
 const (
 	plus  byte = 43
@@ -17,7 +14,5 @@ func Expression_evaluation(s string) int {
 	//plus := "+"
 	//sub := "-"
 	//mul := "*"
-	b := []byte(s)
-	for strings.Split(b, "") {
-	}
+	return 0
 }
