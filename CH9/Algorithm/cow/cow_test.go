@@ -99,5 +99,10 @@ func TestIsValid(t *testing.T) {
 	t.Log(ret)
 }
 func TestExpression_evaluation(t *testing.T) {
-	Expression_evaluation()
+	//Expression_evaluation()
+}
+func TestMerge(t *testing.T) {
+	nums1 := []int{}
+	nums2 := []int{1}
+	merge(nums1, len(nums1), nums2, len(nums2))
 }
