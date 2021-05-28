@@ -102,7 +102,15 @@ func TestExpression_evaluation(t *testing.T) {
 	//Expression_evaluation()
 }
 func TestMerge(t *testing.T) {
-	nums1 := []int{}
-	nums2 := []int{1}
+	nums1 := []int{2, 3}
+	nums2 := []int{1, 4}
 	merge(nums1, len(nums1), nums2, len(nums2))
+	mergeSort(nums1, nums2)
+}
+func TestMissNum(t *testing.T) {
+	nums1 := []int{0, 1, 2, 3, 4, 5, 7, 8, 9}
+	nums2 := []int{0, 1, 2, 3, 4, 5, 6, 7, 8}
+	ret1 := missNum(nums1)
+	ret2 := missNum(nums2)
+	t.Logf("ret1 = %d\tret2 = %d\n", ret1, ret2)
 }
