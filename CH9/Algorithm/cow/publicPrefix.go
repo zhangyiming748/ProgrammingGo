@@ -1,26 +1,52 @@
 package cow
 
 import (
-	"fmt"
+	"log"
 	"math"
+	"strconv"
 	"strings"
 )
 
 func publicPrefix(s []string) string {
-	short := shorter(s)
-	count := 0
-	for i := 0; i < short; i++ {
-		char := s[count][i]
-		for idx, _ := range s {
-			if s[idx][count] == char {
-				count += 1
+	if len(s) == 0 {
+		return ""
+	}
+	if len(s) == 1 {
+		return s[0]
+	}
+	short := shorter(s) //最短字符串
+	var count int       //每一个字符串的内部索引
+	var sameword []byte
+	for count = 0; count < short; count++ {
+		word := []byte{}
+		for _, v := range s {
+			word = append(word, v[count])
+			log.Println("word = ", word)
+		}
+		if same(word) {
+			count += 1
+			sameword = append(sameword, uint8(word))
+
+		} else {
+			break
+		}
+	}
+	log.Println(sameword)
+	ret := strconv.Itoa(count)
+	return string(ret)
+}
+func same(b []byte) bool {
+	for i, v := range b {
+		if i > 1 {
+			if b[i-1] == v {
+				log.Println("相同")
+				continue
+			} else {
+				return false
 			}
 		}
-
 	}
-	fmt.Println(count)
-	ret := s[0][:count]
-	return ret
+	return true
 }
 func shorter(s []string) int {
 	short := math.MaxInt32
