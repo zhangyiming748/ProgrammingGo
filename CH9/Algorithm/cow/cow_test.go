@@ -114,3 +114,9 @@ func TestMissNum(t *testing.T) {
 	ret2 := missNum(nums2)
 	t.Logf("ret1 = %d\tret2 = %d\n", ret1, ret2)
 }
+func TestPublicPrefix(t *testing.T) {
+	words := []string{"abca", "abc", "abca", "abc", "abcc"}
+	ret := publicPrefix(words)
+	//ret:=shorter(words)
+	t.Log(ret)
+}
