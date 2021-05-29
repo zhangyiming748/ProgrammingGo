@@ -25,7 +25,7 @@ func publicPrefix(s []string) string {
 		}
 		if same(word) {
 			count += 1
-			sameword = append(sameword, uint8(word))
+			//sameword = append(sameword, uint8(word))
 
 		} else {
 			break
