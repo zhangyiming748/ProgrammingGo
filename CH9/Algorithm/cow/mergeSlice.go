@@ -1,6 +1,9 @@
 package cow
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
 
 func merge(A []int, m int, B []int, n int) {
 	if len(A) == 0 {
@@ -35,4 +38,10 @@ func merge(A []int, m int, B []int, n int) {
 	A = nline
 	fmt.Println(A)
 	return
+}
+func mergeSort(A, B []int) {
+	A = append(A, B...)
+	fmt.Printf("before: %v", A)
+	sort.Ints(A)
+	fmt.Printf("after: %v", A)
 }
