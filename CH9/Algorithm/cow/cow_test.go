@@ -1,6 +1,9 @@
 package cow
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 //两数之和
 func TestTwoSum(t *testing.T) {
@@ -118,5 +121,32 @@ func TestPublicPrefix(t *testing.T) {
 	words := []string{"abc", "abc", "abca", "abc", "abcc"}
 	ret := publicPrefix(words)
 	//ret:=shorter(words)
+	t.Log(ret)
+}
+
+type slice []int
+
+func TestGo(t *testing.T) {
+	x := []string{"a", "b", "c"}
+	for v := range x {
+		fmt.Print(v)
+	}
+
+}
+
+func (s *slice) Add(exem int) *slice {
+	fmt.Println(exem)
+	*s = append(*s, exem)
+	return s
+}
+
+func TestFirstNotRepeatingChar(t *testing.T) {
+	str := "google"
+	ret := FirstNotRepeatingChar(str)
+	t.Log(ret)
+}
+func TestMysqrt(t *testing.T) {
+	in := 7
+	ret := mySqrt(in)
 	t.Log(ret)
 }
