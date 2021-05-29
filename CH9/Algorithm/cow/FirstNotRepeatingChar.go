@@ -1,24 +1,30 @@
 package cow
 
-import (
-	"fmt"
-)
-
-type abc struct {
-	index int
-}
+import ()
 
 func FirstNotRepeatingChar(str string) int {
 	s := []byte(str)
-	fmt.Println(s)
+	//fmt.Println(s)
+	single := []byte{}
+	m := make(map[byte]int)
+	for _, v := range s {
+		if _, ok := m[v]; ok {
+			m[v] = m[v] + 1
+		} else {
+			m[v] = 1
+		}
+		//fmt.Printf("循环中:%v\n",m)
+	}
+	for key, value := range m {
+		if value == 1 {
+			single = append(single, key)
+		}
+	}
+	for idx, val := range s {
+		for _, v := range single {
+			if val == v {
+				return idx
 
-	for i := 0; i <= len(s)-2; i++ {
-		for j := i + 1; j <= len(s)-1; j++ {
-			if s[i] == s[j] {
-				break
-			}
-			if j == len(s)-1 {
-				return i
 			}
 		}
 	}
