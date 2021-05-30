@@ -176,3 +176,16 @@ func TestEffectiveIp(t *testing.T) {
 	t2 := EffectiveIp(ipv6)
 	t.Logf("ipv6 is %s", t2)
 }
+func TestReverse(t *testing.T) {
+	in1 := 123
+	//49 50 51
+	in2 := -123
+	ret1 := reverse(in1)
+	ret2 := reverse(in2)
+	t.Logf("ret1 = %d\tret2 = %d\n", ret1, ret2)
+}
+func TestMaxLength(t *testing.T) {
+	nums := []int{2, 2, 3, 4, 8, 99, 3}
+	ret := maxLength(nums)
+	t.Log(ret)
+}
