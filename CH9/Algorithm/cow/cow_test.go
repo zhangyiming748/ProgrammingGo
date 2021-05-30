@@ -108,7 +108,7 @@ func TestMerge(t *testing.T) {
 	nums1 := []int{2, 3}
 	nums2 := []int{1, 4}
 	merge(nums1, len(nums1), nums2, len(nums2))
-	mergeSort(nums1, nums2)
+
 }
 func TestMissNum(t *testing.T) {
 	nums1 := []int{0, 1, 2, 3, 4, 5, 7, 8, 9}
@@ -148,5 +148,16 @@ func TestFirstNotRepeatingChar(t *testing.T) {
 func TestMysqrt(t *testing.T) {
 	in := 7
 	ret := mySqrt(in)
+	t.Log(ret)
+}
+
+func TestFindKth(t *testing.T) {
+	nums:=[]int{1,3,5,2,2}
+	//1,2,3,5 3
+	ret1:=dumplicate(nums)
+	t.Logf("ret1 = %v",ret1)
+	l:=5
+	target:=3
+	ret:=findKth(nums,l,target)
 	t.Log(ret)
 }
