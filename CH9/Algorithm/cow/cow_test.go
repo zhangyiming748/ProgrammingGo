@@ -161,3 +161,18 @@ func TestFindKth(t *testing.T) {
 	ret := findKth(nums, l, target)
 	t.Log(ret)
 }
+func TestByte(t *testing.T) {
+	s := "0123456789ABCDEFGabcdefg"
+	b := []byte(s)
+	for i, v := range b {
+		t.Logf("%d `s ascii is %v\n", i+1, v)
+	}
+}
+func TestEffectiveIp(t *testing.T) {
+	ipv4 := "172.16.254.1"
+	ipv6 := "2001:0db8:85a3:0:0:8A2E:0370:7334"
+	t1 := EffectiveIp(ipv4)
+	t.Logf("ipv4 is %s", t1)
+	t2 := EffectiveIp(ipv6)
+	t.Logf("ipv6 is %s", t2)
+}
