@@ -2,6 +2,7 @@ package cow
 
 import (
 	"fmt"
+	"strconv"
 	"testing"
 )
 
@@ -188,4 +189,15 @@ func TestMaxLength(t *testing.T) {
 	nums := []int{2, 2, 3, 4, 8, 99, 3}
 	ret := maxLength(nums)
 	t.Log(ret)
+}
+func TestName(t *testing.T) {
+
+
+		var s string
+		fmt.Scanln(&s)
+		h, _ :=strconv.ParseFloat(s,64)
+		long := (h - 105) * 0.618 / 3.14
+		fmt.Printf("长度= %vcm", long)
+
+
 }
