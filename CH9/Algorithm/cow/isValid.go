@@ -1,7 +1,5 @@
 package cow
 
-
-
 type character struct {
 	data []uint8
 }

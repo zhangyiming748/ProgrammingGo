@@ -1,7 +1,5 @@
 package main
 
-
-
 func ReString(str string) string {
 	data := []byte{}
 	newdata := []byte{}

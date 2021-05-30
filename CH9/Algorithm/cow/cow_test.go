@@ -152,12 +152,12 @@ func TestMysqrt(t *testing.T) {
 }
 
 func TestFindKth(t *testing.T) {
-	nums:=[]int{1,3,5,2,2}
+	nums := []int{1, 3, 5, 2, 2}
 	//1,2,3,5 3
-	ret1:=dumplicate(nums)
-	t.Logf("ret1 = %v",ret1)
-	l:=5
-	target:=3
-	ret:=findKth(nums,l,target)
+	ret1 := dumplicate(nums)
+	t.Logf("ret1 = %v", ret1)
+	l := 5
+	target := 3
+	ret := findKth(nums, l, target)
 	t.Log(ret)
 }
