@@ -192,12 +192,15 @@ func TestMaxLength(t *testing.T) {
 }
 func TestName(t *testing.T) {
 
+	var s string
+	fmt.Scanln(&s)
+	h, _ := strconv.ParseFloat(s, 64)
+	long := (h - 105) * 0.618 / 3.14
+	fmt.Printf("长度= %vcm", long)
 
-		var s string
-		fmt.Scanln(&s)
-		h, _ :=strconv.ParseFloat(s,64)
-		long := (h - 105) * 0.618 / 3.14
-		fmt.Printf("长度= %vcm", long)
-
-
+}
+func TestLongestCommonPrefix(t *testing.T) {
+	str := []string{"abca", "abc", "abca", "abc", "abcc"}
+	ret1 := getShort(str)
+	t.Log(ret1)
 }

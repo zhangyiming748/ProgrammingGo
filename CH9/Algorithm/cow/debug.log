@@ -105,3 +105,13 @@ Debug:2021/05/30 23:07:23 maxLength.go:14: 2 5
 Debug:2021/05/30 23:07:23 maxLength.go:14: 3 4
 Debug:2021/05/30 23:07:23 maxLength.go:14: 3 5
 Debug:2021/05/30 23:07:23 maxLength.go:14: 4 5
+Debug:2021/05/31 11:48:15 longestCommonPrefix.go:14: 此次循环字符串长度4
+Debug:2021/05/31 11:48:15 longestCommonPrefix.go:14: 此次循环字符串长度3
+Debug:2021/05/31 11:48:15 longestCommonPrefix.go:14: 此次循环字符串长度4
+Debug:2021/05/31 11:48:15 longestCommonPrefix.go:14: 此次循环字符串长度3
+Debug:2021/05/31 11:48:15 longestCommonPrefix.go:14: 此次循环字符串长度4
+Debug:2021/05/31 11:50:41 longestCommonPrefix.go:16: 此次循环字符串长度4
+Debug:2021/05/31 11:50:41 longestCommonPrefix.go:16: 此次循环字符串长度3
+Debug:2021/05/31 11:50:41 longestCommonPrefix.go:16: 此次循环字符串长度4
+Debug:2021/05/31 11:50:41 longestCommonPrefix.go:16: 此次循环字符串长度3
+Debug:2021/05/31 11:50:41 longestCommonPrefix.go:16: 此次循环字符串长度4
