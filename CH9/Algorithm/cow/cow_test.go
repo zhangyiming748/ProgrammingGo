@@ -201,6 +201,7 @@ func TestName(t *testing.T) {
 }
 func TestLongestCommonPrefix(t *testing.T) {
 	str := []string{"abca", "abc", "abca", "abc", "abcc"}
-	ret1 := getShort(str)
-	t.Log(ret1)
+	//ret1 := getShort(str)
+	ret := longestCommonPrefix(str)
+	t.Log(ret)
 }
