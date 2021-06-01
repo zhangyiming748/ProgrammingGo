@@ -1,34 +1,45 @@
 package cow
 
-import (
-	. "ProgrammingGo/log"
-)
+import . "ProgrammingGo/log"
 
+//使用前缀后缀匹配方法
 func judge(str string) bool {
-	b := []byte(str)
+	prefix := ""
+	suffix := ""
 	mid := 0
-	var l, r int
-	if len(str)%2 == 0 {
-		mid = len(str) / 2
-	} else {
-		mid = len(str)/2 + 1
-
-		for mid-1 > 0 && mid+1 < len(b) {
-			l = mid - 1
-			Debug.Println(l)
-			r = mid + 1
-			Debug.Println(r)
-			if b[l] != b[r] {
-				return false
-			}
+	if len(str) == 1 {
+		return true
+	}
+	if len(str) == 2 {
+		if str[0] == str[1] {
+			return true
+		} else {
+			return false
 		}
 	}
+	if len(str)%2 == 0 {
+		mid = len(str) / 2
+		prefix = str[0:mid]
+		suffix = str[mid:]
+	} else {
+		mid = len(str) / 2
+		prefix = str[0:mid]
+		suffix = str[mid+1:]
+	}
+	antiSuffix := antiString(suffix)
+	if prefix == antiSuffix {
+		return true
+	}
+	Debug.Printf("mid = %v\tprefix =%v\tsuffix =%v", mid, prefix, suffix)
+	return false
 
-	return true
 }
-
-func halfString(s string) string {
+func antiString(s string) string {
 	b := []byte(s)
-	mid := len(b) / 2
-	return string(b[:mid])
+	l := len(b)
+	nline := []byte{}
+	for i := 0; i < l; i++ {
+		nline = append(nline, b[l-i-1])
+	}
+	return string(nline)
 }

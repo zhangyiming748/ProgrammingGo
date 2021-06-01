@@ -215,3 +215,19 @@ Debug:2021/06/01 17:25:19 PalindromeString.go:19: 2
 Debug:2021/06/01 17:25:19 PalindromeString.go:21: 4
 Debug:2021/06/01 18:20:43 PalindromeString.go:18: 2
 Debug:2021/06/01 18:20:43 PalindromeString.go:20: 4
+Debug:2021/06/01 20:15:23 longestCommonPrefix.go:47: 此次循环字符串长度4
+Debug:2021/06/01 20:15:23 longestCommonPrefix.go:47: 此次循环字符串长度3
+Debug:2021/06/01 20:15:23 longestCommonPrefix.go:47: 此次循环字符串长度4
+Debug:2021/06/01 20:15:23 longestCommonPrefix.go:47: 此次循环字符串长度3
+Debug:2021/06/01 20:15:23 longestCommonPrefix.go:47: 此次循环字符串长度4
+Debug:2021/06/01 20:15:23 longestCommonPrefix.go:39: 3
+Debug:2021/06/01 20:15:47 PalindromeString.go:13: 2  
+Debug:2021/06/01 20:15:47 PalindromeString.go:13: 0  
+Debug:2021/06/01 20:16:51 PalindromeString.go:13: mid = 2	prefix =	suffix =
+Debug:2021/06/01 20:16:51 PalindromeString.go:13: mid = 0	prefix =	suffix =
+Debug:2021/06/01 20:17:30 PalindromeString.go:13: mid = 2	prefix =	suffix =
+Debug:2021/06/01 20:17:47 PalindromeString.go:13: mid = 3	prefix =	suffix =
+Debug:2021/06/01 20:18:29 PalindromeString.go:15: mid = 3	prefix =abs	suffix =
+Debug:2021/06/01 20:18:39 PalindromeString.go:15: mid = 2	prefix =ab	suffix =
+Debug:2021/06/01 20:19:06 PalindromeString.go:16: mid = 2	prefix =ab	suffix =ba
+Debug:2021/06/01 20:20:06 PalindromeString.go:20: mid = 2	prefix =ab	suffix =ba

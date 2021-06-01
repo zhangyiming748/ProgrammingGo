@@ -207,9 +207,14 @@ func TestLongestCommonPrefix(t *testing.T) {
 	t.Log(ret)
 }
 func TestHalfString(t *testing.T) {
-	s1 := "absba"
-	s2 := "m"
+	s1 := "abcba"
+
 	ret1 := judge(s1)
-	ret2 := judge(s2)
-	t.Logf("ret1 = %v\tret2 = %v\n", ret1, ret2)
+
+	t.Logf("ret1 = %v\n", ret1)
+}
+func TestAntiString(t *testing.T) {
+	str := "helloworld"
+	ret := antiString(str)
+	t.Log(ret)
 }
