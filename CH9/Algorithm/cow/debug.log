@@ -126,3 +126,92 @@ Debug:2021/05/31 13:59:05 longestCommonPrefix.go:30: 此次循环字符串长度
 Debug:2021/05/31 13:59:05 longestCommonPrefix.go:30: 此次循环字符串长度3
 Debug:2021/05/31 13:59:05 longestCommonPrefix.go:30: 此次循环字符串长度4
 Debug:2021/05/31 13:59:05 longestCommonPrefix.go:22: 0
+Debug:2021/05/31 15:56:42 longestCommonPrefix.go:32: 此次循环字符串长度4
+Debug:2021/05/31 15:56:42 longestCommonPrefix.go:32: 此次循环字符串长度3
+Debug:2021/05/31 15:56:42 longestCommonPrefix.go:32: 此次循环字符串长度4
+Debug:2021/05/31 15:56:42 longestCommonPrefix.go:32: 此次循环字符串长度3
+Debug:2021/05/31 15:56:42 longestCommonPrefix.go:32: 此次循环字符串长度4
+Debug:2021/05/31 15:56:42 longestCommonPrefix.go:24: 3
+Debug:2021/05/31 15:56:55 longestCommonPrefix.go:32: 此次循环字符串长度3
+Debug:2021/05/31 15:56:55 longestCommonPrefix.go:32: 此次循环字符串长度3
+Debug:2021/05/31 15:56:55 longestCommonPrefix.go:32: 此次循环字符串长度4
+Debug:2021/05/31 15:56:55 longestCommonPrefix.go:32: 此次循环字符串长度3
+Debug:2021/05/31 15:56:55 longestCommonPrefix.go:32: 此次循环字符串长度4
+Debug:2021/05/31 15:56:55 longestCommonPrefix.go:16: 2
+Debug:2021/05/31 15:56:55 longestCommonPrefix.go:24: 2
+Debug:2021/05/31 15:57:28 longestCommonPrefix.go:31: 此次循环字符串长度4
+Debug:2021/05/31 15:57:28 longestCommonPrefix.go:31: 此次循环字符串长度3
+Debug:2021/05/31 15:57:28 longestCommonPrefix.go:31: 此次循环字符串长度4
+Debug:2021/05/31 15:57:28 longestCommonPrefix.go:31: 此次循环字符串长度3
+Debug:2021/05/31 15:57:28 longestCommonPrefix.go:31: 此次循环字符串长度4
+Debug:2021/05/31 15:57:28 longestCommonPrefix.go:23: 3
+Debug:2021/05/31 20:56:43 PalindromeString.go:14: 2
+Debug:2021/05/31 20:56:43 PalindromeString.go:14: 2
+Debug:2021/05/31 20:57:29 PalindromeString.go:14: 3
+Debug:2021/05/31 20:57:29 PalindromeString.go:14: 2
+Debug:2021/05/31 20:59:18 PalindromeString.go:17: 3
+Debug:2021/05/31 20:59:18 PalindromeString.go:13: sh aw
+Debug:2021/05/31 20:59:18 PalindromeString.go:17: 2
+Debug:2021/05/31 21:00:47 PalindromeString.go:18: hel lo
+Debug:2021/05/31 21:00:47 PalindromeString.go:20: 3
+Debug:2021/05/31 21:00:47 PalindromeString.go:13: sh aw
+Debug:2021/05/31 21:00:47 PalindromeString.go:20: 2
+Debug:2021/05/31 21:00:59 PalindromeString.go:18: he lo
+Debug:2021/05/31 21:00:59 PalindromeString.go:20: 3
+Debug:2021/05/31 21:00:59 PalindromeString.go:13: sh aw
+Debug:2021/05/31 21:00:59 PalindromeString.go:20: 2
+Debug:2021/05/31 21:13:08 PalindromeString.go:20: he lo
+Debug:2021/05/31 21:13:08 PalindromeString.go:29: Suffix is [108 111] type []uint8
+Debug:2021/05/31 21:13:08 PalindromeString.go:30: Prefix is [104 101] type []uint8
+Debug:2021/05/31 21:13:08 PalindromeString.go:31: 3
+Debug:2021/05/31 21:13:08 PalindromeString.go:15: sh aw
+Debug:2021/05/31 21:13:08 PalindromeString.go:29: Suffix is [97 119] type []uint8
+Debug:2021/05/31 21:13:08 PalindromeString.go:30: Prefix is [115 104] type []uint8
+Debug:2021/05/31 21:13:08 PalindromeString.go:31: 2
+Debug:2021/05/31 21:14:28 PalindromeString.go:20: he lo
+Debug:2021/05/31 21:14:28 PalindromeString.go:29: Suffix is [108 111] type []uint8
+Debug:2021/05/31 21:14:28 PalindromeString.go:30: Prefix is [104 101] type []uint8
+Debug:2021/05/31 21:14:28 PalindromeString.go:31: antiSuffix is [] type []uint8
+Debug:2021/05/31 21:14:28 PalindromeString.go:32: 3
+Debug:2021/05/31 21:14:28 PalindromeString.go:15: sh aw
+Debug:2021/05/31 21:14:28 PalindromeString.go:29: Suffix is [97 119] type []uint8
+Debug:2021/05/31 21:14:28 PalindromeString.go:30: Prefix is [115 104] type []uint8
+Debug:2021/05/31 21:14:28 PalindromeString.go:31: antiSuffix is [] type []uint8
+Debug:2021/05/31 21:14:28 PalindromeString.go:32: 2
+Debug:2021/05/31 21:15:08 PalindromeString.go:20: he lo
+Debug:2021/05/31 21:15:08 PalindromeString.go:27: [108]
+Debug:2021/05/31 21:15:08 PalindromeString.go:27: [108 108]
+Debug:2021/05/31 21:15:08 PalindromeString.go:29: Suffix is [108 111] type []uint8
+Debug:2021/05/31 21:15:08 PalindromeString.go:30: Prefix is [104 101] type []uint8
+Debug:2021/05/31 21:15:08 PalindromeString.go:31: antiSuffix is [108 108] type []uint8
+Debug:2021/05/31 21:15:08 PalindromeString.go:32: 3
+Debug:2021/05/31 21:15:08 PalindromeString.go:15: sh aw
+Debug:2021/05/31 21:15:08 PalindromeString.go:27: [97]
+Debug:2021/05/31 21:15:08 PalindromeString.go:27: [97 97]
+Debug:2021/05/31 21:15:08 PalindromeString.go:29: Suffix is [97 119] type []uint8
+Debug:2021/05/31 21:15:08 PalindromeString.go:30: Prefix is [115 104] type []uint8
+Debug:2021/05/31 21:15:08 PalindromeString.go:31: antiSuffix is [97 97] type []uint8
+Debug:2021/05/31 21:15:08 PalindromeString.go:32: 2
+Debug:2021/05/31 21:15:22 PalindromeString.go:20: he lo
+Debug:2021/05/31 21:15:22 PalindromeString.go:27: [108]
+Debug:2021/05/31 21:15:22 PalindromeString.go:27: [108 108]
+Debug:2021/05/31 21:15:22 PalindromeString.go:29: Suffix is [108 111] type []uint8
+Debug:2021/05/31 21:15:22 PalindromeString.go:30: Prefix is [104 101] type []uint8
+Debug:2021/05/31 21:15:22 PalindromeString.go:31: antiSuffix is [108 108] type []uint8
+Debug:2021/05/31 21:15:22 PalindromeString.go:32: 3
+Debug:2021/05/31 21:15:22 PalindromeString.go:15: md dm
+Debug:2021/05/31 21:15:22 PalindromeString.go:27: [100]
+Debug:2021/05/31 21:15:22 PalindromeString.go:27: [100 100]
+Debug:2021/05/31 21:15:22 PalindromeString.go:29: Suffix is [100 109] type []uint8
+Debug:2021/05/31 21:15:22 PalindromeString.go:30: Prefix is [109 100] type []uint8
+Debug:2021/05/31 21:15:22 PalindromeString.go:31: antiSuffix is [100 100] type []uint8
+Debug:2021/05/31 21:15:22 PalindromeString.go:32: 2
+Debug:2021/05/31 21:22:21 PalindromeString.go:12: b[mid-1] = 101	b[mid+1] = 108
+Debug:2021/06/01 17:24:21 PalindromeString.go:19: 2
+Debug:2021/06/01 17:24:21 PalindromeString.go:21: 4
+Debug:2021/06/01 17:24:53 PalindromeString.go:19: 2
+Debug:2021/06/01 17:24:53 PalindromeString.go:21: 4
+Debug:2021/06/01 17:25:19 PalindromeString.go:19: 2
+Debug:2021/06/01 17:25:19 PalindromeString.go:21: 4
+Debug:2021/06/01 18:20:43 PalindromeString.go:18: 2
+Debug:2021/06/01 18:20:43 PalindromeString.go:20: 4

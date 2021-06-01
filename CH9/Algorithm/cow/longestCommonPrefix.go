@@ -7,14 +7,31 @@ import (
 )
 
 func longestCommonPrefix(strs []string) string {
-	min, word := getShort(strs)
+	if len(strs) == 1 {
+		return strs[0]
+	}
 
+	min, word := getShort(strs)
+	if min == 1 {
+		//tmp:=strs[0][0]
+		//for i,v:=range strs {
+		//	if tmp == []byte(v)/ {
+		//		tmp = v
+		//	}else {
+		//		return ""
+		//	}
+		//
+		//}
+		return strs[0]
+	}
 	count := 0
-	for i := 0; i < len(strs); i++ { //遍历每个单词
-		for j := 1; j < min; j++ {
-			before := strs[i][j-1]
-			after := strs[i][j]
-			if before == after {
+	for _, v := range strs { //遍历每个单词
+		if count < min {
+			if v[count] != word[count] {
+				Debug.Println(count)
+				break
+
+			} else {
 				count++
 			}
 		}

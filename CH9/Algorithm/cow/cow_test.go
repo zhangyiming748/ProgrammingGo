@@ -2,7 +2,7 @@ package cow
 
 import (
 	"fmt"
-	"strconv"
+
 	"testing"
 )
 
@@ -191,12 +191,13 @@ func TestMaxLength(t *testing.T) {
 	t.Log(ret)
 }
 func TestName(t *testing.T) {
-
-	var s string
-	fmt.Scanln(&s)
-	h, _ := strconv.ParseFloat(s, 64)
-	long := (h - 105) * 0.618 / 3.14
-	fmt.Printf("长度= %vcm", long)
+	ret := 5 / 2
+	t.Log(ret)
+	//var s string
+	//fmt.Scanln(&s)
+	//h, _ := strconv.ParseFloat(s, 64)
+	//long := (h - 105) * 0.618 / 3.14
+	//fmt.Printf("长度= %vcm", long)
 
 }
 func TestLongestCommonPrefix(t *testing.T) {
@@ -204,4 +205,11 @@ func TestLongestCommonPrefix(t *testing.T) {
 	//ret1 := getShort(str)
 	ret := longestCommonPrefix(str)
 	t.Log(ret)
+}
+func TestHalfString(t *testing.T) {
+	s1 := "absba"
+	s2 := "m"
+	ret1 := judge(s1)
+	ret2 := judge(s2)
+	t.Logf("ret1 = %v\tret2 = %v\n", ret1, ret2)
 }
