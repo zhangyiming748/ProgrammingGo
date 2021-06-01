@@ -231,3 +231,124 @@ Debug:2021/06/01 20:18:29 PalindromeString.go:15: mid = 3	prefix =abs	suffix =
 Debug:2021/06/01 20:18:39 PalindromeString.go:15: mid = 2	prefix =ab	suffix =
 Debug:2021/06/01 20:19:06 PalindromeString.go:16: mid = 2	prefix =ab	suffix =ba
 Debug:2021/06/01 20:20:06 PalindromeString.go:20: mid = 2	prefix =ab	suffix =ba
+Debug:2021/06/01 21:47:28 longestCommonPrefix.go:20: min = 4	s = abca
+Debug:2021/06/01 21:47:28 longestCommonPrefix.go:20: min = 3	s = abc
+Debug:2021/06/01 21:53:04 longestCommonPrefix.go:29: min = 4	s = abca
+Debug:2021/06/01 21:53:04 longestCommonPrefix.go:29: min = 3	s = abc
+Debug:2021/06/01 21:53:04 longestCommonPrefix.go:15: i=0	j=0	s[i]=97	strs[j][i]=97
+Debug:2021/06/01 21:53:04 longestCommonPrefix.go:15: i=0	j=1	s[i]=97	strs[j][i]=97
+Debug:2021/06/01 21:53:04 longestCommonPrefix.go:15: i=0	j=2	s[i]=97	strs[j][i]=97
+Debug:2021/06/01 21:53:04 longestCommonPrefix.go:15: i=0	j=3	s[i]=97	strs[j][i]=97
+Debug:2021/06/01 21:53:04 longestCommonPrefix.go:15: i=0	j=4	s[i]=97	strs[j][i]=97
+Debug:2021/06/01 21:53:04 longestCommonPrefix.go:15: i=1	j=0	s[i]=98	strs[j][i]=98
+Debug:2021/06/01 21:53:04 longestCommonPrefix.go:15: i=1	j=1	s[i]=98	strs[j][i]=98
+Debug:2021/06/01 21:53:04 longestCommonPrefix.go:15: i=1	j=2	s[i]=98	strs[j][i]=98
+Debug:2021/06/01 21:53:04 longestCommonPrefix.go:15: i=1	j=3	s[i]=98	strs[j][i]=98
+Debug:2021/06/01 21:53:04 longestCommonPrefix.go:15: i=1	j=4	s[i]=98	strs[j][i]=98
+Debug:2021/06/01 21:53:04 longestCommonPrefix.go:15: i=2	j=0	s[i]=99	strs[j][i]=99
+Debug:2021/06/01 21:53:04 longestCommonPrefix.go:15: i=2	j=1	s[i]=99	strs[j][i]=99
+Debug:2021/06/01 21:53:04 longestCommonPrefix.go:15: i=2	j=2	s[i]=99	strs[j][i]=99
+Debug:2021/06/01 21:53:04 longestCommonPrefix.go:15: i=2	j=3	s[i]=99	strs[j][i]=99
+Debug:2021/06/01 21:53:04 longestCommonPrefix.go:15: i=2	j=4	s[i]=99	strs[j][i]=99
+Debug:2021/06/01 21:53:59 longestCommonPrefix.go:32: min = 4	s = abca
+Debug:2021/06/01 21:53:59 longestCommonPrefix.go:32: min = 3	s = abc
+Debug:2021/06/01 21:53:59 longestCommonPrefix.go:17: i=0	j=0	s[i]=97	strs[j][i]=97
+Debug:2021/06/01 21:53:59 longestCommonPrefix.go:17: i=0	j=1	s[i]=97	strs[j][i]=97
+Debug:2021/06/01 21:53:59 longestCommonPrefix.go:17: i=0	j=2	s[i]=97	strs[j][i]=97
+Debug:2021/06/01 21:53:59 longestCommonPrefix.go:17: i=0	j=3	s[i]=97	strs[j][i]=97
+Debug:2021/06/01 21:53:59 longestCommonPrefix.go:17: i=0	j=4	s[i]=97	strs[j][i]=97
+Debug:2021/06/01 21:53:59 longestCommonPrefix.go:17: i=1	j=0	s[i]=98	strs[j][i]=98
+Debug:2021/06/01 21:53:59 longestCommonPrefix.go:17: i=1	j=1	s[i]=98	strs[j][i]=98
+Debug:2021/06/01 21:53:59 longestCommonPrefix.go:17: i=1	j=2	s[i]=98	strs[j][i]=98
+Debug:2021/06/01 21:53:59 longestCommonPrefix.go:17: i=1	j=3	s[i]=98	strs[j][i]=98
+Debug:2021/06/01 21:53:59 longestCommonPrefix.go:17: i=1	j=4	s[i]=98	strs[j][i]=98
+Debug:2021/06/01 21:53:59 longestCommonPrefix.go:17: i=2	j=0	s[i]=99	strs[j][i]=99
+Debug:2021/06/01 21:53:59 longestCommonPrefix.go:17: i=2	j=1	s[i]=99	strs[j][i]=99
+Debug:2021/06/01 21:53:59 longestCommonPrefix.go:17: i=2	j=2	s[i]=99	strs[j][i]=99
+Debug:2021/06/01 21:53:59 longestCommonPrefix.go:17: i=2	j=3	s[i]=99	strs[j][i]=99
+Debug:2021/06/01 21:53:59 longestCommonPrefix.go:17: i=2	j=4	s[i]=99	strs[j][i]=99
+Debug:2021/06/01 21:53:59 longestCommonPrefix.go:22: 15
+Debug:2021/06/01 21:55:28 longestCommonPrefix.go:33: min = 4	s = abca
+Debug:2021/06/01 21:55:28 longestCommonPrefix.go:33: min = 3	s = abc
+Debug:2021/06/01 21:55:28 longestCommonPrefix.go:17: i=0	j=0	s[i]=97	strs[j][i]=97
+Debug:2021/06/01 21:55:28 longestCommonPrefix.go:17: i=0	j=1	s[i]=97	strs[j][i]=97
+Debug:2021/06/01 21:55:28 longestCommonPrefix.go:17: i=0	j=2	s[i]=97	strs[j][i]=97
+Debug:2021/06/01 21:55:28 longestCommonPrefix.go:17: i=0	j=3	s[i]=97	strs[j][i]=97
+Debug:2021/06/01 21:55:28 longestCommonPrefix.go:17: i=0	j=4	s[i]=97	strs[j][i]=97
+Debug:2021/06/01 21:55:28 longestCommonPrefix.go:17: i=1	j=0	s[i]=98	strs[j][i]=98
+Debug:2021/06/01 21:55:28 longestCommonPrefix.go:17: i=1	j=1	s[i]=98	strs[j][i]=98
+Debug:2021/06/01 21:55:28 longestCommonPrefix.go:17: i=1	j=2	s[i]=98	strs[j][i]=98
+Debug:2021/06/01 21:55:28 longestCommonPrefix.go:17: i=1	j=3	s[i]=98	strs[j][i]=98
+Debug:2021/06/01 21:55:28 longestCommonPrefix.go:17: i=1	j=4	s[i]=98	strs[j][i]=98
+Debug:2021/06/01 21:55:28 longestCommonPrefix.go:17: i=2	j=0	s[i]=99	strs[j][i]=99
+Debug:2021/06/01 21:55:28 longestCommonPrefix.go:17: i=2	j=1	s[i]=99	strs[j][i]=99
+Debug:2021/06/01 21:55:28 longestCommonPrefix.go:17: i=2	j=2	s[i]=99	strs[j][i]=99
+Debug:2021/06/01 21:55:28 longestCommonPrefix.go:17: i=2	j=3	s[i]=99	strs[j][i]=99
+Debug:2021/06/01 21:55:28 longestCommonPrefix.go:17: i=2	j=4	s[i]=99	strs[j][i]=99
+Debug:2021/06/01 21:55:28 longestCommonPrefix.go:23: 3
+Debug:2021/06/01 21:57:19 longestCommonPrefix.go:34: min = 4	s = abca
+Debug:2021/06/01 21:57:19 longestCommonPrefix.go:34: min = 3	s = abc
+Debug:2021/06/01 21:57:19 longestCommonPrefix.go:17: i=0	j=0	s[i]=97	strs[j][i]=97
+Debug:2021/06/01 21:57:19 longestCommonPrefix.go:17: i=0	j=1	s[i]=97	strs[j][i]=97
+Debug:2021/06/01 21:57:19 longestCommonPrefix.go:17: i=0	j=2	s[i]=97	strs[j][i]=97
+Debug:2021/06/01 21:57:19 longestCommonPrefix.go:17: i=0	j=3	s[i]=97	strs[j][i]=97
+Debug:2021/06/01 21:57:19 longestCommonPrefix.go:17: i=0	j=4	s[i]=97	strs[j][i]=97
+Debug:2021/06/01 21:57:19 longestCommonPrefix.go:17: i=1	j=0	s[i]=98	strs[j][i]=98
+Debug:2021/06/01 21:57:19 longestCommonPrefix.go:17: i=1	j=1	s[i]=98	strs[j][i]=98
+Debug:2021/06/01 21:57:19 longestCommonPrefix.go:17: i=1	j=2	s[i]=98	strs[j][i]=98
+Debug:2021/06/01 21:57:19 longestCommonPrefix.go:17: i=1	j=3	s[i]=98	strs[j][i]=98
+Debug:2021/06/01 21:57:19 longestCommonPrefix.go:17: i=1	j=4	s[i]=98	strs[j][i]=98
+Debug:2021/06/01 21:57:19 longestCommonPrefix.go:17: i=2	j=0	s[i]=99	strs[j][i]=99
+Debug:2021/06/01 21:57:19 longestCommonPrefix.go:17: i=2	j=1	s[i]=99	strs[j][i]=99
+Debug:2021/06/01 21:57:19 longestCommonPrefix.go:17: i=2	j=2	s[i]=99	strs[j][i]=99
+Debug:2021/06/01 21:57:19 longestCommonPrefix.go:17: i=2	j=3	s[i]=99	strs[j][i]=99
+Debug:2021/06/01 21:57:19 longestCommonPrefix.go:17: i=2	j=4	s[i]=99	strs[j][i]=99
+Debug:2021/06/01 21:57:19 longestCommonPrefix.go:22: 15
+Debug:2021/06/01 21:57:19 longestCommonPrefix.go:24: 3
+Debug:2021/06/01 21:57:29 longestCommonPrefix.go:34: min = 4	s = acca
+Debug:2021/06/01 21:57:29 longestCommonPrefix.go:34: min = 3	s = abc
+Debug:2021/06/01 21:57:29 longestCommonPrefix.go:17: i=0	j=0	s[i]=97	strs[j][i]=97
+Debug:2021/06/01 21:57:29 longestCommonPrefix.go:17: i=0	j=1	s[i]=97	strs[j][i]=97
+Debug:2021/06/01 21:57:29 longestCommonPrefix.go:17: i=0	j=2	s[i]=97	strs[j][i]=97
+Debug:2021/06/01 21:57:29 longestCommonPrefix.go:17: i=0	j=3	s[i]=97	strs[j][i]=97
+Debug:2021/06/01 21:57:29 longestCommonPrefix.go:17: i=0	j=4	s[i]=97	strs[j][i]=97
+Debug:2021/06/01 21:57:29 longestCommonPrefix.go:17: i=1	j=1	s[i]=98	strs[j][i]=98
+Debug:2021/06/01 21:57:29 longestCommonPrefix.go:17: i=1	j=2	s[i]=98	strs[j][i]=98
+Debug:2021/06/01 21:57:29 longestCommonPrefix.go:17: i=1	j=3	s[i]=98	strs[j][i]=98
+Debug:2021/06/01 21:57:29 longestCommonPrefix.go:17: i=1	j=4	s[i]=98	strs[j][i]=98
+Debug:2021/06/01 21:57:29 longestCommonPrefix.go:17: i=2	j=0	s[i]=99	strs[j][i]=99
+Debug:2021/06/01 21:57:29 longestCommonPrefix.go:17: i=2	j=1	s[i]=99	strs[j][i]=99
+Debug:2021/06/01 21:57:29 longestCommonPrefix.go:17: i=2	j=2	s[i]=99	strs[j][i]=99
+Debug:2021/06/01 21:57:29 longestCommonPrefix.go:17: i=2	j=3	s[i]=99	strs[j][i]=99
+Debug:2021/06/01 21:57:29 longestCommonPrefix.go:17: i=2	j=4	s[i]=99	strs[j][i]=99
+Debug:2021/06/01 21:57:29 longestCommonPrefix.go:22: 14
+Debug:2021/06/01 21:57:29 longestCommonPrefix.go:24: 2
+Debug:2021/06/01 22:16:11 longestCommonPrefix.go:51: min = 4	s = acca
+Debug:2021/06/01 22:16:11 longestCommonPrefix.go:51: min = 3	s = abc
+Debug:2021/06/01 22:16:11 longestCommonPrefix.go:41: 3
+Debug:2021/06/01 22:16:30 longestCommonPrefix.go:51: min = 4	s = abca
+Debug:2021/06/01 22:16:30 longestCommonPrefix.go:51: min = 3	s = abc
+Debug:2021/06/01 22:16:30 longestCommonPrefix.go:41: 3
+Debug:2021/06/01 22:17:48 longestCommonPrefix.go:51: min = 4	s = abca
+Debug:2021/06/01 22:17:48 longestCommonPrefix.go:51: min = 3	s = abc
+Debug:2021/06/01 22:17:48 longestCommonPrefix.go:41: 3
+Debug:2021/06/01 22:18:00 longestCommonPrefix.go:51: min = 4	s = abca
+Debug:2021/06/01 22:18:00 longestCommonPrefix.go:51: min = 3	s = abc
+Debug:2021/06/01 22:18:33 longestCommonPrefix.go:51: min = 4	s = abca
+Debug:2021/06/01 22:18:33 longestCommonPrefix.go:51: min = 3	s = abc
+Debug:2021/06/01 22:19:34 longestCommonPrefix.go:51: min = 4	s = abca
+Debug:2021/06/01 22:19:34 longestCommonPrefix.go:51: min = 3	s = abc
+Debug:2021/06/01 22:19:34 longestCommonPrefix.go:41: 3
+Debug:2021/06/01 22:20:01 longestCommonPrefix.go:52: min = 4	s = abca
+Debug:2021/06/01 22:20:01 longestCommonPrefix.go:52: min = 3	s = abc
+Debug:2021/06/01 22:20:15 longestCommonPrefix.go:52: min = 3	s = aca
+Debug:2021/06/01 22:20:15 longestCommonPrefix.go:18: final 6
+Debug:2021/06/01 22:20:15 longestCommonPrefix.go:18: final 7
+Debug:2021/06/01 22:20:15 longestCommonPrefix.go:18: final 8
+Debug:2021/06/01 22:20:15 longestCommonPrefix.go:18: final 9
+Debug:2021/06/01 22:20:15 longestCommonPrefix.go:18: final 11
+Debug:2021/06/01 22:20:15 longestCommonPrefix.go:18: final 12
+Debug:2021/06/01 22:20:15 longestCommonPrefix.go:18: final 13
+Debug:2021/06/01 22:20:15 longestCommonPrefix.go:18: final 14
+Debug:2021/06/01 22:28:41 longestCommonPrefix.go:63: min = 3	s = aca
+Debug:2021/06/01 22:29:10 longestCommonPrefix.go:63: min = 3	s = aca
