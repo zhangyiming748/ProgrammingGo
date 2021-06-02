@@ -10,16 +10,16 @@ import (
 
 func longestCommonPrefix(strs []string) string {
 	same := 0
-	i := 1
-	j := 0
-	s := moreThen(strs)
-	for i < len(strs) || j <= s {
-		if strs[i][j] != strs[i-1][j] {
-			break
-		} else {
-			same++
-		}
-	}
+	//i := 1
+	//j := 0
+	//s := moreThen(strs)
+	//for i < len(strs) || j <= s {
+	//	if strs[i][j] != strs[i-1][j] {
+	//		break
+	//	} else {
+	//		same++
+	//	}
+	//}
 	//l:=len(strs)
 	//same:=0
 	//sb, min := moreThen(strs)
