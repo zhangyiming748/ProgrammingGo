@@ -225,3 +225,13 @@ func TestMinDifference(t *testing.T) {
 
 	t.Log(ret, minDifference(nums2))
 }
+func TestSpinSlice(t *testing.T) {
+	nums := []int{1, 2, 3, 4, 5, 6}
+	l := 6
+	c := 2
+	spinSlice(l, c, nums)
+}
+func TestMaximumcandies(t *testing.T) {
+	ret := Maximumcandies(30, 60)
+	t.Log(ret)
+}
