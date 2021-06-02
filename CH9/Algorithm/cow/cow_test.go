@@ -218,3 +218,10 @@ func TestAntiString(t *testing.T) {
 	ret := antiString(str)
 	t.Log(ret)
 }
+func TestMinDifference(t *testing.T) {
+	nums := []int{1, 2, 4}
+	nums2 := []int{1, 3, 1}
+	ret := minDifference(nums)
+
+	t.Log(ret, minDifference(nums2))
+}

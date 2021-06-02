@@ -352,3 +352,5 @@ Debug:2021/06/01 22:20:15 longestCommonPrefix.go:18: final 13
 Debug:2021/06/01 22:20:15 longestCommonPrefix.go:18: final 14
 Debug:2021/06/01 22:28:41 longestCommonPrefix.go:63: min = 3	s = aca
 Debug:2021/06/01 22:29:10 longestCommonPrefix.go:63: min = 3	s = aca
+Debug:2021/06/02 17:34:52 longestCommonPrefix.go:32: min = 3	s = aca
+Debug:2021/06/02 17:35:25 longestCommonPrefix.go:32: min = 3	s = aca
