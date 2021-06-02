@@ -53,16 +53,16 @@ func longestCommonPrefix(strs []string) string {
 	log.Println(same)
 	return ""
 }
-func moreThen(strs []string) int {
-	min := math.MaxInt32
-
-	for _, v := range strs {
-		if len(v) < min {
-			min = len(v)
-
-			Debug.Printf("min = %v\ts = %v\n", min, v)
-		}
-	}
-
-	return min
-}
+//func moreThen(strs []string) int {
+//	min := math.MaxInt32
+//
+//	for _, v := range strs {
+//		if len(v) < min {
+//			min = len(v)
+//
+//			Debug.Printf("min = %v\ts = %v\n", min, v)
+//		}
+//	}
+//
+//	return min
+//}
