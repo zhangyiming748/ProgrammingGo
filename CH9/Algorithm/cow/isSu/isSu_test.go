@@ -34,21 +34,3 @@ func solve(n int) string {
 	}
 	return "YES"
 }
-
-/*
-class Solution {
-
-int solve(string s) {
-// write code here
-int res = 0, max = 0;
-for (int i = 0; i < s.size(); i++) {
-if (s[i] >= '0' && s[i] <= '9') res = res * 16 + (s[i] - '0');
-else if (s[i] >= 'A' && s[i] <= 'F') res = res * 16 + (s[i] - 'A' + 10);
-else res = 0;
-if (res > max) max = res;
-}
-return max;
-}
-};
-
-*/
