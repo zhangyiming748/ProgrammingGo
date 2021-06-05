@@ -1,5 +1,11 @@
 package buildStation
 
+import (
+	"go/constant"
+	"log/syslog"
+	"strconv"
+)
+
 /*
 描述
 X轴上10^8个点，从左到右依次编号为0~10^8-1，相邻点距离为1，其中有n个点有特殊意义，从小到大依次为a0~an-1，其中保证a0=0.
@@ -50,18 +56,41 @@ return sum;
 };
 */
 func work(n int, a []int) int {
-	ans:=n
-	for i:=0;i<n;i++{
-		val:=a[i]-a[i-1]
-		if isprime(val){
-			continue
-		}else if isprime(val-2){
-			ans+=1
-		}else if !(val&1)
+	ans := 0
+	length := []int{}
+	for i := 0; i < n-1; i++ {
+		length[i] = a[i+1] - a[i]
+		if isprime(length[i]) {
+			ans++
+		} else {
+			ans += separate(length[i])
+		}
+	}
+	return ans + 1
+}
+func separate(num int) int {
+	if isprime(num) {
+		return 1
+	} else {
+		if num%2 == 0 {
+			return 2
+		} else {
+			if isprime(num - 2) {
+				return 2
+			} else {
+				return 3
+			}
+		}
 	}
 }
-func isprime(v int) bool {
-	for i:=0;i*i<=n;i++{
-
+func isprime(num int) bool {
+	if num == 1 {
+		return true
 	}
+	for i := 2; i*i <= num; i++ {
+		if num%i == 0 {
+			return false
+		}
+	}
+	return true
 }
