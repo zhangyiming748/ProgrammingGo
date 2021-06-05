@@ -1,6 +1,9 @@
 package doQuestion
 
-import "testing"
+import (
+	"bytes"
+	"testing"
+)
 
 /*
 描述
@@ -36,19 +39,21 @@ func TestDoQuestion(t *testing.T) {
 	t.Log(ret)
 }
 func doQuestion(n int) int {
-	sum := 0
-	res := 0
-	for i := 1; i < n; i++ {
-		sum = 0
+	if n == 1 {
+		return 1
+	}
+	res := 1
+	for i := 2; i <= n; i++ {
+		sum := 0
 		for j := 1; j <= i; j++ {
 			if i%j == 0 {
 				sum += j
 			}
 		}
-		if sum/i < 2 {
-			res += 1
+		sumf := float64(sum)
+		if sumf/float64(i) < 2 {
+			res += i
 		}
-
 	}
 	return res
 }
