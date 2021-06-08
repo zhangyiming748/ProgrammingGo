@@ -2,6 +2,8 @@ package getMinStack
 
 import (
 	l "ProgrammingGo/log"
+
+	"math"
 	"testing"
 )
 
@@ -25,26 +27,29 @@ import (
 */
 type Stack struct {
 	nums []int
-	null bool
-	cup  int
+	min  int
 }
 
-func (s *Stack) pop() {
-	if s.cup > 0 {
-		s.nums = s.nums[:s.cup]
+func (s *Stack) pop() int {
+	val := s.nums[len(s.nums)-1]
+	s.nums = s.nums[:len(s.nums)-1]
+	for _, v := range s.nums {
+		if v < s.min {
+			s.min = v
+		}
 	}
-	return
+	return val
 }
 func (s *Stack) push(i int) {
 	s.nums = append(s.nums, i)
-	s.cup++
-}
-func (s Stack) empty() bool {
-	if s.cup == 0 {
-		return true
+	for _, v := range s.nums {
+		if v < s.min {
+			s.min = v
+		}
 	}
-	return false
+	return
 }
+
 func TestStack(t *testing.T) {
 	s := new(Stack)
 	s.push(1)
@@ -62,34 +67,33 @@ func TestGetMinStack(t *testing.T) {
 */
 
 func getMinStack(op [][]int) []int {
-	stack := []int{}
-	min := 1000000
+	s := new(Stack)
+	s.min = math.MaxInt32
 	ans := []int{}
 	for i := 0; i < len(op); i++ {
-		if op[i][0] == 2 {
-			if len(stack) == 0 {
-				l.Debug.Println("没有可以弹出的")
-			} else {
-				stack = stack[:len(stack)-1]
+		for j := 0; j < len(op[i]); j++ {
+			l.Info.Printf("一次循环%v\n", op[i][j])
+			if op[i][j] == 1 && j == 0 {
+				s.push(op[i][j+1])
 			}
-
-			for _, v := range stack {
-				if v < min {
-					min = v
-				}
+			if op[i][j] == 2 && j == 0 {
+				s.pop()
 			}
-		}
-		if op[i][0] == 1 {
-			v := op[i][1]
-			if v < min {
-				min = v
+			if op[i][j] == 3 && j == 0 {
+				ans = append(ans, s.min)
 			}
-			stack = append(stack, v)
 		}
 
-		if op[i][0] == 3 {
-			ans = append(ans, min)
-		}
+		//if op[i][0] == 3 {
+		//	ans = append(ans, s.min)
+		//}
+		//if op[i][0] == 2 {
+		//	p:=s.pop()
+		//	l.Info.Println("弹出",p)
+		//}
+		//if op[i][0] == 1 {
+		//	s.push(op[i][1])
+		//}
 	}
 	return ans
 }
