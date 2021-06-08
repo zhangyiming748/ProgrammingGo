@@ -2,7 +2,6 @@ package getMinStack
 
 import (
 	l "ProgrammingGo/log"
-
 	"testing"
 )
 
@@ -24,7 +23,34 @@ import (
 数据保证没有不合法的操作
 
 */
+type Stack struct {
+	nums []int
+	null bool
+	cup  int
+}
 
+func (s *Stack) pop() {
+	if s.cup > 0 {
+		s.nums = s.nums[:s.cup]
+	}
+	return
+}
+func (s *Stack) push(i int) {
+	s.nums = append(s.nums, i)
+	s.cup++
+}
+func (s Stack) empty() bool {
+	if s.cup == 0 {
+		return true
+	}
+	return false
+}
+func TestStack(t *testing.T) {
+	s := new(Stack)
+	s.push(1)
+	s.push(2)
+
+}
 func TestGetMinStack(t *testing.T) {
 	in := [][]int{{1, 3}, {1, 2}, {1, 1}, {3}, {2}, {3}}
 	ret := getMinStack(in)
