@@ -32,12 +32,13 @@ type Stack struct {
 
 func (s *Stack) pop() int {
 	val := s.nums[len(s.nums)-1]
-	s.nums = s.nums[:len(s.nums)-1]
+	tmp := s.nums[:len(s.nums)-1]
 	for _, v := range s.nums {
 		if v < s.min {
 			s.min = v
 		}
 	}
+	s.nums = tmp
 	return val
 }
 func (s *Stack) push(i int) {
@@ -52,8 +53,13 @@ func (s *Stack) push(i int) {
 
 func TestStack(t *testing.T) {
 	s := new(Stack)
+	l.Info.Printf("此时s=%v\n", s.nums)
 	s.push(1)
+	l.Info.Printf("此时s=%v\n", s.nums)
 	s.push(2)
+	l.Info.Printf("此时s=%v\n", s.nums)
+	s.pop()
+	l.Info.Printf("此时s=%v\n", s.nums)
 
 }
 func TestGetMinStack(t *testing.T) {
@@ -71,16 +77,22 @@ func getMinStack(op [][]int) []int {
 	s.min = math.MaxInt32
 	ans := []int{}
 	for i := 0; i < len(op); i++ {
+		l.Info.Printf("i=%d", i)
 		for j := 0; j < len(op[i]); j++ {
 			l.Info.Printf("一次循环%v\n", op[i][j])
 			if op[i][j] == 1 && j == 0 {
 				s.push(op[i][j+1])
+				l.Info.Printf("push%v\n", op[i][j+1])
+				break
 			}
 			if op[i][j] == 2 && j == 0 {
-				s.pop()
+				p := s.pop()
+				l.Info.Printf("pop%v\n", p)
+				break
 			}
 			if op[i][j] == 3 && j == 0 {
 				ans = append(ans, s.min)
+				break
 			}
 		}
 
