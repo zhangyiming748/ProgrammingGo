@@ -48,33 +48,24 @@ func encode(str string, d int) string {
 }
 func decode(str string, d int) string {
 	// write code here
-	offset := byte(d)
-	log.Info.Println(offset)
+	abracadabra := "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz" //97 122 48 57 65 90
+	abc := []byte(abracadabra)
+	l := len(abc)
+	//log.Info.Println(l)
+	offset := d % 62
+	//log.Info.Println(offset)
 	b := []byte(str)
 	passwd := []byte{}
-	for i := 0; i < len(b); i++ {
-		if 'a' <= b[i] && b[i] <= 'z' {
-			if b[i]-offset < 97 {
-
+	for i := 0; i < len(b); i++ { //加密文本
+		for j := 0; j < l; j++ {
+			if b[i] == abc[j] {
+				if j-offset >= 0 {
+					passwd = append(passwd, abc[j-offset])
+				} else {
+					passwd = append(passwd, abc[j-offset+62])
+				}
 			}
 		}
-		if 'A' <= b[i] && b[i] <= 'Z' {
-			offset = offset % 26
-			if b[i]-offset >= 'A' {
-				passwd = append(passwd, b[i]-offset)
-			} else {
-				passwd = append(passwd, b[i]-offset+26)
-			}
-		}
-		if '0' <= b[i] && b[i] <= '9' {
-			offset = offset % 10
-			if b[i]-offset >= '0' {
-				passwd = append(passwd, b[i]-offset)
-			} else {
-				passwd = append(passwd, b[i]-offset+10)
-			}
-		}
-
 	}
 	ret := string(passwd)
 	return ret
@@ -86,6 +77,7 @@ func TestDecode(t *testing.T) {
 }
 func TestByte(t *testing.T) {
 	s := "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz" //97 122 48 57 65 90
+
 	b := []byte(s)
 	t.Log(b)
 }
