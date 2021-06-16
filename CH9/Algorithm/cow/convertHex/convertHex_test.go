@@ -1,6 +1,9 @@
 package convertHex
 
-import "testing"
+import (
+	"strings"
+	"testing"
+)
 
 /*
 描述
@@ -13,9 +16,41 @@ import "testing"
 "111"
 
 */
+/*
+string solve(int M, int N) {
+        string res;
+        bool flag = false;
+        if (M < 0) {
+            M = -M;
+            flag = true;
+        }
+        const char* a = "0123456789ABCDEF";
+        while (M != 0) {
+            res = a[M % N] + res;
+            M /= N;
+        }
+        if (flag) {
+            res = "-" + res;
+        }
+        return res;
+    }
+*/
+const a = "0123456789ABCDEF"
+
 func solve(M int, N int) string {
-	// write code here
+	var res []byte
+	var flag bool
+	for M != 0 {
+		res = append(res, a[M%N])
+		M /= N
+	}
+	result := string(res)
+	if flag {
+		strings.Join([]string{"-", result}, "")
+	}
+	return result
 }
 func TestSolve(t *testing.T) {
-
+	ret := solve(7, 2)
+	t.Log(ret)
 }
