@@ -35,22 +35,26 @@ string solve(int M, int N) {
         return res;
     }
 */
-const a = "0123456789ABCDEF"
 
 func solve(M int, N int) string {
-	var res []byte
+	var res string
 	var flag bool
+	if M < 0 {
+		M = -M
+		flag = true
+	}
+	const a = "0123456789ABCDEF"
 	for M != 0 {
-		res = append(res, a[M%N])
+		res = strings.Join([]string{string(a[M%N]), res}, "")
 		M /= N
 	}
 	result := string(res)
 	if flag {
-		strings.Join([]string{"-", result}, "")
+		result = strings.Join([]string{"-", result}, "")
 	}
 	return result
 }
 func TestSolve(t *testing.T) {
-	ret := solve(7, 2)
+	ret := solve(-4, 3)
 	t.Log(ret)
 }
