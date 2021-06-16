@@ -1,40 +1,50 @@
 package multiBig
 
+import (
+	"math"
+	"testing"
+)
+
+/*
+给定一个无序数组，包含正数、负数和0，要求从中找出3个数的乘积，使得乘积最大，要求时间复杂度：O(n)，空间复杂度：O(1)。
+输入：
+[3,4,1,2]
+返回值：
+24
+*/
+func TestSolve(t *testing.T) {
+	ret := solve([]int{3, 4, 1, 2})
+	t.Log(ret)
+}
 func solve(a []int) int64 {
-	if len(a) == 3 {
-		return int64(a[0] * a[1] * a[2])
-	}
-	var z1, z2, z3, b1, b2, sum1, sum2 int64
-	var i1, i2, j1 int
-	for i := 0; i < len(a); i++ {
-		if int64(a[i]) > z1 {
-			z1 = int64(a[i])
-			i1 = i
+	var (
+		max1, max2, max3 = math.MinInt32, math.MinInt32, math.MinInt32
+		min1, min2       = math.MaxInt32, math.MaxInt32
+	)
+	for _, num := range a {
+		if num > max1 {
+			max3 = max2
+			max2 = max1
+			max1 = num
+		} else if num > max2 {
+			max3 = max2
+			max2 = num
+		} else if num > max3 {
+			max3 = num
 		}
-		if int64(a[i]) < b1 {
-			b1 = int64(a[i])
-			j1 = i
-		}
-	}
-	for i := 0; i < len(a); i++ {
-		if int64(a[i]) > z2 && i != i1 {
-			z2 = int64(a[i])
-			i2 = i
-		}
-		if int64(a[i]) < b1 && i != j1 {
-			b2 = int64(a[i])
+		if num < min1 {
+			min2 = min1
+			min1 = num
+		} else if num < min2 {
+			min2 = num
 		}
 	}
-	for i := 0; i < len(a); i++ {
-		if int64(a[i]) > z3 && i != i1 && i != i2 {
-			z3 = int64(a[i])
-		}
+	biggest := max(int64(max1*max2*max3), int64(max1*min1*min2))
+	return biggest
+}
+func max(a, b int64) int64 {
+	if a > b {
+		return a
 	}
-	sum1 = z1 * z2 * z3
-	sum2 = z1 * b1 * b2
-	if sum1 > sum2 {
-		return sum1
-	} else {
-		return sum2
-	}
+	return b
 }
