@@ -16,25 +16,6 @@ import (
 "111"
 
 */
-/*
-string solve(int M, int N) {
-        string res;
-        bool flag = false;
-        if (M < 0) {
-            M = -M;
-            flag = true;
-        }
-        const char* a = "0123456789ABCDEF";
-        while (M != 0) {
-            res = a[M % N] + res;
-            M /= N;
-        }
-        if (flag) {
-            res = "-" + res;
-        }
-        return res;
-    }
-*/
 
 func solve(M int, N int) string {
 	var res string
