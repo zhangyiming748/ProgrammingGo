@@ -5,57 +5,66 @@ import (
 	"testing"
 )
 
-type nums struct {
-	m map[int]int //存kv
-	s []int       //存cache的key
+type list struct {
+	Length int         //cache容量
+	s      []int       //key的切片
+	m      map[int]int //key:value
 }
 
-func (n *nums) get(key int) int {
-	for _, v := range n.s {
-		if v == key {
-			n.cache(v)
-			return n.m[v]
-		}
-	}
-	return -1
-}
-func (n *nums) set(k, v int) {
-	n.m[k] = v
-	n.cache(k)
-}
-func (n *nums) cache(i int) {
-	n.s = append(n.s, i)
-	if len(n.s) > 3 {
-		delete(n.m, n.s[0])
-		n.s = n.s[1:]
+func (l *list) push(key, value int) {
+	l.m[key] = value
+	log.Info.Printf("set %v:%v\n", key, value)
+	l.s = append(l.s, key)
+	log.Info.Printf("当前的cache列表%v\n", l.s)
+	if len(l.s) > l.Length {
+		delete(l.m, l.s[0])
+		l.s = l.s[1:]
+		log.Info.Printf("修剪过的cache列表%v\n", l.s)
+
 	}
 	return
 }
-func LRU() {
-	op := [][]int{{1, 1, 1}, {1, 2, 2}, {1, 3, 2}, {2, 1}, {1, 4, 4}, {2, 2}}
-	//cap := 3
-	n := new(nums)
-	n.m = make(map[int]int)
-	res := []int{}
-	for i := 0; i < len(op); i++ {
-		log.Info.Printf("开始处理第%d组操作数", i+1)
-		if len(op[i]) == 3 {
-			k := op[i][1]
-			v := op[i][2]
-			log.Info.Printf("插入键值对%d:%d\n", k, v)
-			n.set(k, v)
+func (l *list) pop(key int) int {
+	if v, ok := l.m[key]; ok {
+		value := v
+		log.Info.Printf("set %v:%v\n", key, value)
+		l.s = append(l.s, key)
+		log.Info.Printf("当前的cache列表%v\n", l.s)
+		if len(l.s) > l.Length {
+			delete(l.m, l.s[0])
+			l.s = l.s[1:]
+			log.Info.Printf("修剪过的cache列表%v\n", l.s)
 		}
-		if len(op[i]) == 2 {
-			k := op[i][1]
+		return value
+	}
+	return -1
 
-			res = append(res, n.get(k))
-			log.Info.Printf("查找键值对%d,此时的res=%v\n", k, res)
+}
+func LRU(operators [][]int, k int) []int {
+	op := operators
+	capp := k
+	l := new(list)
+	l.m = make(map[int]int)
+	l.Length = capp
+	l.s = make([]int, 0)
+	res := make([]int, 0)
+	for _, v := range op {
+		if len(v) == 3 {
+			key := v[1]
+			value := v[2]
+			l.push(key, value)
+		}
+		if len(v) == 2 {
+			key := v[1]
+			value := l.pop(key)
+			res = append(res, value)
 		}
 	}
-	log.Debug.Println()
+	return res
 }
 func TestLRU(t *testing.T) {
-	//op := [][]int{{1, 1, 1}, {1, 2, 2}, {1, 3, 2}, {2, 1}, {1, 4, 4}, {2, 2}}
-	//cap := 3
-	LRU()
+	op := [][]int{{1, 1, 1}, {1, 2, 2}, {1, 3, 2}, {2, 1}, {1, 4, 4}, {2, 2}}
+	cap := 3
+	ret := LRU(op, cap)
+	t.Log(ret)
 }
