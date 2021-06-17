@@ -56,7 +56,9 @@ func TestLRU(t *testing.T) {
 	in := [][]int{{1, 1, 1}, {1, 2, 2}, {1, 3, 2}, {2, 1}, {1, 4, 4}, {2, 2}}
 	cache := 3
 	ret := LRU(in, cache)
+	newret := allIn(in, cache)
 	t.Log(ret)
+	t.Log(newret)
 }
 func LRU(operators [][]int, k int) []int {
 	// write code here
@@ -78,6 +80,38 @@ func LRU(operators [][]int, k int) []int {
 			res = append(res, ret)
 			log.Info.Printf("第%d组get操作:key=%d\tval=%d\n", i+1, key, ret)
 			log.Info.Printf("此时的map=%v\ncache列表=%v\n容量设置为%v\n", li.nums, li.cache, li.cap)
+		}
+	}
+	return res
+}
+func allIn(op [][]int, k int) []int {
+	cache := make([]int, 0) //缓存队列
+	kv := make(map[int]int) //保存所有键值对
+	res := make([]int, 0)
+	for i, v := range op {
+		log.Info.Printf("循环第%d组操作数", i+1)
+		if v[0] == 1 && len(v) == 3 { //set操作
+			key := v[1]
+			val := v[2]
+			kv[key] = val
+			cache = append(cache, key)
+			if len(cache) > k {
+				cache = cache[1:]
+			}
+		}
+		if v[0] == 2 && len(v) == 2 {
+			for i, val := range cache {
+				if val == v[1] {
+					res = append(res, kv[val])
+					cache = append(cache, val)
+					if len(cache) > k {
+						cache = cache[1:]
+					}
+				}
+				if i == len(cache)-1 && val != v[1] {
+					res = append(res, -1)
+				}
+			}
 		}
 	}
 	return res
