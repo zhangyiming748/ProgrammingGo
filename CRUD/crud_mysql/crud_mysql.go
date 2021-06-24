@@ -2,6 +2,7 @@ package crud_mysql
 
 import (
 	"ProgrammingGo/log"
+	_ "database/sql"
 	"fmt"
 	_ "github.com/go-sql-driver/mysql"
 )
@@ -152,4 +153,39 @@ func DeleteByName(name string) {
 	if err := tx.Commit(); err != nil {
 		log.Error.Panicln("提交事务出错")
 	}
+}
+func isDuplicate(name string) bool {
+	//使用工具获取数据库连接
+	//准备SQL语句
+	db := InitDB()
+	sql := "select * from t_testuser where `name` = ?"
+	//对SQL语句进行预处理
+	stmt, err := db.Prepare(sql)
+	if err != nil {
+		panic(err)
+	}
+	rows, err := stmt.Query(name)
+	if err != nil {
+		//SQL执行失败，直接panic
+		panic(err)
+	}
+	var users []User
+	for rows.Next() {
+		var id int
+		var name, password string
+		err := rows.Scan(&id, &name, &password)
+		if err != nil {
+			//读取结果集失败
+			panic(err)
+		}
+		var user User
+		user.SetId(id)
+		user.SetName(name)
+		user.SetPassword(password)
+		users = append(users, user)
+	}
+	if len(users) != 0 {
+		return true
+	}
+	return false
 }

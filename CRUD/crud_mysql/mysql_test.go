@@ -8,7 +8,7 @@ func TestInitDB(t *testing.T) {
 
 }
 func TestInsert(t *testing.T) {
-	name := "yang"
+	name := "zhang"
 	passwd := "123456"
 	Insert(name, passwd)
 }
@@ -21,6 +21,14 @@ func TestUpdate(t *testing.T) {
 }
 func TestSelect(t *testing.T) {
 	//SelectAll()
-	name := "yang"
+	name := "wang"
 	SelectByName(name)
+}
+func TestIsDuplicate(t *testing.T) {
+	name := "xhang"
+	ret := isDuplicate(name)
+	t.Log(ret)
+}
+func TestCreateT(t *testing.T) {
+	CreateT("")
 }

@@ -1,0 +1,6 @@
+Debug:2021/06/24 18:07:27 crud_mysql.go:37: 插入记录的id:4
+Debug:2021/06/24 18:07:46 crud_mysql.go:36: 插入记录的id:5
+Debug:2021/06/24 18:34:23 crud_mysql.go:41: 插入记录的id:6
+Debug:2021/06/24 18:36:49 crud_mysql.go:42: 插入记录的id:7
+Debug:2021/06/24 18:37:35 crud_mysql.go:42: 插入记录的id:8
+Debug:2021/06/24 18:38:33 crud_mysql.go:37: 插入记录的id:9
