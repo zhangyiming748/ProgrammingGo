@@ -8,14 +8,19 @@ func TestInitDB(t *testing.T) {
 
 }
 func TestInsert(t *testing.T) {
-	Insert()
+	name := "yang"
+	passwd := "123456"
+	Insert(name, passwd)
 }
-func TestDeleteByID(t *testing.T) {
-	DeleteByID()
+func TestDeleteByName(t *testing.T) {
+	name := "zhang"
+	DeleteByName(name)
 }
 func TestUpdate(t *testing.T) {
 	Update()
 }
 func TestSelect(t *testing.T) {
-	Select()
+	//SelectAll()
+	name := "yang"
+	SelectByName(name)
 }
