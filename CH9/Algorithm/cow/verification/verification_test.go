@@ -18,35 +18,41 @@ func solve(IP string) string {
 }
 func typeV4(s []string) string {
 	for _, v := range s {
-		if num, _ := strconv.Atoi(v); num <= 0 && num >= 255 {
+		num, _ := strconv.Atoi(v)
+		if num < 0 || num > 255 {
 			return "Neither"
+		}
+		for idx, val := range v {
+			if val == '0' && idx == 0 {
+				return "Neither"
+			}
 		}
 	}
 	return "IPv4"
 }
 func typeV6(s string) string {
 	slice := strings.Split(s, ":")
-	if len(slice) < 8 {
-
-	}
 	for _, v := range slice {
-		if v == "" {
+		if v == "" || len(v) > 4 {
 			return "Neither"
 		}
-	}
-	for _, v := range slice {
 		for _, val := range v {
-			if val >= 0 && val <= 9 || val >= 'A' && val <= 'F' || val >= 'a' && val <= 'f' {
+			if val >= 0 && val <= 9 {
 				continue
-			} else {
-				return "Neither"
 			}
+			if val >= 'A' && val <= 'F' {
+				continue
+			}
+			if val >= 'a' && val <= 'f' {
+				continue
+			}
+			return "IPv6"
 		}
 	}
 	return "IPv6"
 }
 func TestSolve(t *testing.T) {
-	ip := "172.16.234.1"
+	ip := "256.256.256.256"
 	ipv6 := "2001:0db8:85a3:0:0:8A2E:0370:7334"
 	ret6 := solve(ipv6)
 	ret := solve(ip)
