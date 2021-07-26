@@ -6,20 +6,20 @@ import (
 )
 
 func firstMissingPositive(nums []int) int {
-	m:=make(map[int]bool)
-	for _,v:=range nums{
-		if v>0{
-			m[v]=true
+	m := make(map[int]bool)
+	for _, v := range nums {
+		if v > 0 {
+			m[v] = true
 		}
 	}
-	for i:=1;i<math.MaxInt32;i++{
-		if _,ok:=m[i];ok{
+	for i := 1; i < math.MaxInt32; i++ {
+		if _, ok := m[i]; ok {
 			continue
-		}else {
+		} else {
 			return i
 		}
 	}
-	return nums[len(nums)]+1
+	return nums[len(nums)] + 1
 }
 
 func TestFirstMissing(t *testing.T) {
