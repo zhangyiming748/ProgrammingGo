@@ -8,17 +8,24 @@ import "testing"
 有一个数字重复
 */
 func findErrorNums(nums []int) []int {
-	l := len(nums)
-	var miss int
-	for i := 0; i < l; i++ {
+	if nums[0] != 1 {
+		return []int{2, 1}
+	}
+	if nums[1] == 1 {
+		return []int{1, 2}
+	}
+	for i := 0; i < len(nums); i++ {
 		if i+1 == nums[i] {
 			continue
 		} else {
-			miss = i
-			break
+			if i == len(nums)-1 {
+				return []int{nums[i], nums[i] - 2}
+			} else {
+				return []int{nums[i], nums[i] + 1}
+			}
 		}
 	}
-	return []int{miss, miss + 1}
+	return nil
 }
 
 func TestUnit(t *testing.T) {
@@ -26,5 +33,7 @@ func TestUnit(t *testing.T) {
 	//[2,3]
 	nums2 := []int{1, 1}
 	//[1,2]
-	t.Logf("ret1=%v\tret2=%v\n", findErrorNums(nums1), findErrorNums(nums2))
+	nums3 := []int{2, 2}
+	//[2,1]
+	t.Logf("ret1=%v\tret2=%v\tret3=%v\n", findErrorNums(nums1), findErrorNums(nums2), findErrorNums(nums3))
 }
