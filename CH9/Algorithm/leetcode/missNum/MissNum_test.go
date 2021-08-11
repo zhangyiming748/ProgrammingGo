@@ -18,10 +18,8 @@ func findErrorNums(nums []int) []int {
 		if i+1 == nums[i] {
 			continue
 		} else {
-			if i == len(nums)-1 {
-				return []int{nums[i], nums[i] - 2}
-			} else {
-				return []int{nums[i], nums[i] + 1}
+			if i==len(nums)-1{
+				return []int{nums[i], nums[i]+1}
 			}
 		}
 	}
