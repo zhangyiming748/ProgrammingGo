@@ -1,22 +1,27 @@
 package intersect
 
-import "testing"
+import (
+	"sort"
+	"testing"
+)
 
 func intersect(nums1, nums2 []int) []int {
-	n1 := duplicate(nums1)
-	n2 := duplicate(nums2)
-	inner:=[]int{}
-	if len(n1) < len(n2) {
-		n1, n2 = n2, n1
-	}
-	for i := 0; i < len(n1); i++ {
-		for j:=0;j<len(n2);j++{
-			if n1[i]==n2[j]{
-				inner=append(inner,n1)
-			}
+	sort.Ints(nums1)
+	sort.Ints(nums2)
+	ret:=make([]int,0)
+	i,j:=0,0
+	for i<len(nums1)||j<len(nums2){
+		if nums1[i]<nums2[j]{
+			i++
+		}else if nums1[i]>nums2[j]{
+			j++
+		}else {
+			ret=append(ret,nums1[i])
+			i++
+			j++
 		}
 	}
-	return inner
+	return ret
 }
 func duplicate(n []int) []int {
 	newnums := []int{}
