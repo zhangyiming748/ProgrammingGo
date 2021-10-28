@@ -1,4 +1,4 @@
-package main
+package Algorithm
 
 func ReString(str string) string {
 	data := []byte{}

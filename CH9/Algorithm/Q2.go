@@ -1,7 +1,7 @@
-package main
+package Algorithm
 
 import (
-	"fmt"
+	//"fmt"
 	"strings"
 )
 
@@ -17,8 +17,8 @@ func Q2() {
 		}
 	}
 	//fmt.Printf("ans = %s \n", ans)
-	ret := MySort(ans)
-	fmt.Printf("ret = %v\n", ret)
+	//ret := MySort(ans)
+	//fmt.Printf("ret = %v\n", ret)
 
 }
 func MySort1(s string) string {
